@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Prospector — Seu site profissional em minutos</title>
-  <meta name="description" content="Geramos sites profissionais e convertíveis para o seu negócio, automaticamente.">
+  <meta name="description" content="Geramos sites profissionais e convertíveis para o seu negócio, automaticamente. Qualquer nicho. Pronto em minutos.">
+  <!-- Open Graph (compartilhar bonito no WhatsApp/Facebook) -->
+  <meta property="og:title" content="Website Prospector — Seu site profissional em minutos">
+  <meta property="og:description" content="Aumente suas vendas com um site moderno, responsivo e feito para converter. Qualquer nicho.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://allianceconsultoria.github.io/website-prospector-sites/">
+  <meta property="og:image" content="https://allianceconsultoria.github.io/website-prospector-sites/og-image.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style> body { font-family: 'Inter', sans-serif; } .gradient-bg { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); } </style>
@@ -29,12 +37,11 @@
         Seu site profissional,<br>pronto em minutos.
       </h1>
       <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-        Aumentamos suas vendas com um site moderno, responsivo e feito para converter visitantes em clientes.
+        Aumentamos suas vendas com um site moderno, responsivo e feito para converter visitantes em clientes. <strong>Qualquer nicho.</strong>
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-           class="bg-white text-indigo-700 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition">
-          💬 Quero meu site agora
+        <a href="#formulario" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition">
+          🚀 Quero meu site agora
         </a>
         <a href="#exemplos" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white/10 transition">
           Ver exemplos
@@ -64,24 +71,36 @@
     </div>
   </section>
 
-  <!-- Exemplos -->
+  <!-- Formulário (captura lead) -->
+  <section id="formulario" class="max-w-2xl mx-auto px-4 py-16">
+    <div class="bg-slate-800 rounded-3xl p-8">
+      <h2 class="text-2xl font-extrabold mb-2 text-center">Peça seu site profissional</h2>
+      <p class="text-slate-400 text-center mb-6 text-sm">Preencha e falamos no WhatsApp em minutos.</p>
+      <form id="leadForm" class="space-y-4">
+        <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+        <input name="name" placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+        <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+        <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+        <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-600">
+        <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"></textarea>
+        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl text-lg transition">
+          💬 Enviar e falar no WhatsApp
+        </button>
+        <p id="status" class="text-center text-sm text-green-400 hidden">Enviado! Abrindo WhatsApp...</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Exemplos (dinâmicos via API quando localhost; fixos como fallback) -->
   <section id="exemplos" class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-extrabold text-center mb-10">Sites que já criamos</h2>
-    <div class="grid md:grid-cols-2 gap-6">
+    <div id="sitesGrid" class="grid md:grid-cols-2 gap-6">
       <a href="lead-4001.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
         <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl font-bold">Clínica Grimaldi</div>
         <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
       </a>
       <a href="lead-2003.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
         <div class="h-40 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-2xl font-bold">Nutri Saúde Premium</div>
-        <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
-      </a>
-      <a href="lead-2002.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-        <div class="h-40 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-2xl font-bold">Nutri Saúde</div>
-        <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
-      </a>
-      <a href="lead-2001.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-        <div class="h-40 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-2xl font-bold">Nutri Teste</div>
         <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
       </a>
     </div>
@@ -100,10 +119,38 @@
   <!-- Footer -->
   <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm">
     <p>© 2024 Website Prospector — Sites profissionais gerados automaticamente.</p>
-    <p class="mt-2">
-      <a href="https://wa.me/13064035051" target="_blank" class="text-green-400 hover:underline">WhatsApp direto</a>
-    </p>
+    <p class="mt-2"><a href="https://wa.me/13064035051" target="_blank" class="text-green-400 hover:underline">WhatsApp direto</a></p>
   </footer>
 
+  <script>
+    // Formulário: salva via API (se disponível) e abre WhatsApp com os dados
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(this).entries());
+      // Tenta salvar no backend
+      try {
+        await fetch('http://localhost:3000/api/lead', {
+          method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+        });
+      } catch (err) { /* ignora se não estiver local */ }
+      // Abre WhatsApp com resumo
+      const resumo = `Olá! Quero um site profissional.%0A%0ANegócio: ${data.businessName || ''}%0ANicho: ${data.niche || ''}%0ATelefone: ${data.phone || ''}%0AEmail: ${data.email || ''}`;
+      window.open('https://wa.me/13064035051?text=' + resumo, '_blank');
+      document.getElementById('status').classList.remove('hidden');
+      this.reset();
+    });
+
+    // Carrega sites dinâmicos se a API estiver acessível
+    fetch('http://localhost:3000/api/sites').then(r => r.json()).then(d => {
+      if (d.success && d.sites.length) {
+        const grid = document.getElementById('sitesGrid');
+        grid.innerHTML = d.sites.map(s => `
+          <a href="${s.url}" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
+            <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl font-bold">Lead ${s.name}</div>
+            <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
+          </a>`).join('');
+      }
+    }).catch(() => {});
+  </script>
 </body>
 </html>
