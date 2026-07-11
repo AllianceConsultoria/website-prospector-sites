@@ -3,154 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Prospector — Seu site profissional em minutos</title>
-  <meta name="description" content="Geramos sites profissionais e convertíveis para o seu negócio, automaticamente. Qualquer nicho. Pronto em minutos.">
-  <!-- Open Graph (compartilhar bonito no WhatsApp/Facebook) -->
-  <meta property="og:title" content="Website Prospector — Seu site profissional em minutos">
-  <meta property="og:description" content="Aumente suas vendas com um site moderno, responsivo e feito para converter. Qualquer nicho.">
+  <title>Website Prospector — Seu site profissional que vende</title>
+  <meta name="description" content="Sites profissionais, responsivos e focados em conversão. Qualquer nicho. Pronto em minutos. Fale no WhatsApp.">
+  <meta property="og:title" content="Website Prospector — Sites que convertem">
+  <meta property="og:description" content="Sites profissionais que vendem. Qualquer nicho. Pronto em minutos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://allianceconsultoria.github.io/website-prospector-sites/">
   <meta property="og:image" content="https://allianceconsultoria.github.io/website-prospector-sites/og-image.png">
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style> body { font-family: 'Inter', sans-serif; } .gradient-bg { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); } </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --p: #6366f1; --s: #ec4899; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    .font-display { font-family: 'Poppins', sans-serif; }
+    @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    .animate-gradient { background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b); background-size: 400% 400%; animation: gradientShift 14s ease infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-18px) rotate(2deg)} }
+    .float { animation: float 6s ease-in-out infinite; }
+    @keyframes floatSlow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .float-slow { animation: floatSlow 8s ease-in-out infinite; }
+    @keyframes blob { 0%,100%{border-radius:42% 58% 63% 37% / 41% 44% 56% 59%} 50%{border-radius:58% 42% 37% 63% / 56% 59% 41% 44%} }
+    .blob { animation: blob 12s ease-in-out infinite; }
+    @keyframes fadeup { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+    .reveal { opacity:0; }
+    .reveal.show { animation: fadeup 0.9s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes pulseRing { 0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)} 70%{box-shadow:0 0 0 18px rgba(34,197,94,0)} 100%{box-shadow:0 0 0 0 rgba(34,197,94,0)} }
+    .pulse-ring { animation: pulseRing 2.2s infinite; }
+    .glass { background: rgba(255,255,255,.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); }
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 9px; } ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 8px; }
+  </style>
 </head>
-<body class="bg-slate-900 text-slate-100">
+<body class="bg-slate-950 text-slate-100">
 
-  <!-- Navbar -->
-  <nav class="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur border-b border-slate-800">
+  <!-- NAV -->
+  <nav class="fixed w-full top-0 z-50 transition-all duration-300" id="nav">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="font-extrabold text-xl">🌐 Website Prospector</div>
-      <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
-        💬 Falar no WhatsApp
-      </a>
+      <div class="font-display font-extrabold text-xl tracking-tight">🌐 Website Prospector</div>
+      <div class="flex items-center gap-3">
+        <a href="#portfolio" class="hidden sm:block text-sm text-slate-300 hover:text-white transition">Portfólio</a>
+        <a href="#crm" class="hidden sm:block text-sm text-slate-300 hover:text-white transition">CRM</a>
+        <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
+           class="pulse-ring bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg">💬 WhatsApp</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="gradient-bg pt-28 pb-20 px-4 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-        Seu site profissional,<br>pronto em minutos.
+  <!-- HERO -->
+  <section class="animate-gradient relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-white/10 blob blur-2xl float-slow"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-pink-300/10 blob blur-3xl float"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <div class="float text-7xl mb-6">🚀</div>
+      <span class="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 text-white/90">
+        ✨ Sites que convertem visitantes em clientes
+      </span>
+      <h1 class="font-display text-5xl md:text-7xl font-black leading-[1.05] mb-6 drop-shadow-2xl">
+        Seu site profissional.<br><span class="text-yellow-300">Pronto em minutos.</span>
       </h1>
-      <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-        Aumentamos suas vendas com um site moderno, responsivo e feito para converter visitantes em clientes. <strong>Qualquer nicho.</strong>
+      <p class="text-lg md:text-2xl opacity-95 mb-10 max-w-2xl mx-auto font-light">
+        Aumentamos suas vendas com um site moderno, responsivo e feito para fechar negócios.
+        <strong>Qualquer nicho.</strong> Sem complicação.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#formulario" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#formulario" class="bg-white text-indigo-700 px-10 py-4 rounded-full font-black text-lg hover:scale-110 transition transform shadow-2xl">
           🚀 Quero meu site agora
         </a>
-        <a href="#exemplos" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white/10 transition">
-          Ver exemplos
+        <a href="#portfolio" class="glass text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition">
+          Ver portfólio →
         </a>
       </div>
+      <!-- Stats -->
+      <div class="mt-14 grid grid-cols-3 gap-6 max-w-lg mx-auto">
+        <div class="text-center"><div class="font-display text-3xl font-black" data-count="14">0</div><div class="text-xs opacity-80">Leads qualificados</div></div>
+        <div class="text-center"><div class="font-display text-3xl font-black" data-count="6">0</div><div class="text-xs opacity-80">Sites publicados</div></div>
+        <div class="text-center"><div class="font-display text-3xl font-black" data-count="100">0</div><div class="text-xs opacity-80">% Responsivo</div></div>
+      </div>
     </div>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-2xl float-slow">⌄</div>
   </section>
 
-  <!-- Benefícios -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
+  <!-- BENEFÍCIOS -->
+  <section class="max-w-6xl mx-auto px-4 py-24">
+    <h2 class="font-display text-3xl md:text-5xl font-black text-center mb-14 reveal">Por que seu negócio precisa de nós</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-slate-800 p-6 rounded-2xl">
-        <div class="text-3xl mb-3">⚡</div>
-        <h3 class="font-bold text-lg mb-2">Rápido</h3>
-        <p class="text-slate-400 text-sm">Seu site fica pronto em minutos, não semanas.</p>
+      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition cursor-default">
+        <div class="text-5xl mb-4 float-slow">⚡</div>
+        <h3 class="font-display font-bold text-xl mb-3">Rápido como nunca</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Seu site fica pronto em minutos, não em semanas. Enquanto pensa, a concorrência já vende.</p>
       </div>
-      <div class="bg-slate-800 p-6 rounded-2xl">
-        <div class="text-3xl mb-3">📱</div>
-        <h3 class="font-bold text-lg mb-2">Responsivo</h3>
-        <p class="text-slate-400 text-sm">Perfeito no celular, tablet e desktop.</p>
+      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition" style="transition-delay:.1s">
+        <div class="text-5xl mb-4 float-slow">🎯</div>
+        <h3 class="font-display font-bold text-xl mb-3">Focado em vender</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Botões de WhatsApp, chamadas e CTAs estrategicamente posicionados para converter.</p>
       </div>
-      <div class="bg-slate-800 p-6 rounded-2xl">
-        <div class="text-3xl mb-3">🎯</div>
-        <h3 class="font-bold text-lg mb-2">Focado em conversão</h3>
-        <p class="text-slate-400 text-sm">Botões de WhatsApp e chamadas para fechar mais vendas.</p>
+      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition" style="transition-delay:.2s">
+        <div class="text-5xl mb-4 float-slow">📱</div>
+        <h3 class="font-display font-bold text-xl mb-3">Lindo no celular</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Mais de 70% dos clientes acessam pelo celular. Seu site será perfeito em qualquer tela.</p>
       </div>
     </div>
   </section>
 
-  <!-- Formulário (captura lead) -->
-  <section id="formulario" class="max-w-2xl mx-auto px-4 py-16">
-    <div class="bg-slate-800 rounded-3xl p-8">
-      <h2 class="text-2xl font-extrabold mb-2 text-center">Peça seu site profissional</h2>
-      <p class="text-slate-400 text-center mb-6 text-sm">Preencha e falamos no WhatsApp em minutos.</p>
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="max-w-6xl mx-auto px-4 py-24">
+    <h2 class="font-display text-3xl md:text-5xl font-black text-center mb-4 reveal">Nosso trabalho por nicho</h2>
+    <p class="text-center text-slate-400 mb-12 reveal">Veja sites reais que criamos — e o que podemos fazer para o SEU nicho.</p>
+    <div id="portfolioGrid" class="grid md:grid-cols-3 gap-7"></div>
+  </section>
+
+  <!-- PROVA SOCIAL / DEPOIMENTO -->
+  <section class="max-w-4xl mx-auto px-4 py-24">
+    <div class="glass rounded-3xl p-10 text-center reveal">
+      <div class="text-5xl mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="font-display text-xl md:text-2xl italic mb-6">"Em 2 dias meu telefone não parou de tocar. O site mudou meu negócio."</p>
+      <p class="text-slate-400 text-sm">— Cliente satisfeito · Nutrição</p>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section id="formulario" class="max-w-2xl mx-auto px-4 py-24">
+    <div class="glass rounded-3xl p-8 md:p-10 reveal">
+      <h2 class="font-display text-3xl font-black mb-2 text-center">Peça seu site profissional</h2>
+      <p class="text-slate-400 text-center mb-8 text-sm">Preencha e falamos no WhatsApp em minutos. Simples assim.</p>
       <form id="leadForm" class="space-y-4">
-        <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="name" placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-600">
-        <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"></textarea>
-        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl text-lg transition">
-          💬 Enviar e falar no WhatsApp
-        </button>
+        <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
+        <input name="name" placeholder="Seu nome" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
+        <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
+        <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
+        <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-600 transition">
+        <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition"></textarea>
+        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-xl text-lg transition transform hover:scale-[1.02] shadow-xl">💬 Enviar e falar no WhatsApp</button>
         <p id="status" class="text-center text-sm text-green-400 hidden">Enviado! Abrindo WhatsApp...</p>
       </form>
     </div>
   </section>
 
-  <!-- Exemplos (dinâmicos via API quando localhost; fixos como fallback) -->
-  <section id="exemplos" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-extrabold text-center mb-10">Sites que já criamos</h2>
-    <div id="sitesGrid" class="grid md:grid-cols-2 gap-6">
-      <a href="lead-4001.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-        <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl font-bold">Clínica Grimaldi</div>
-        <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
-      </a>
-      <a href="lead-2003.html" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-        <div class="h-40 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-2xl font-bold">Nutri Saúde Premium</div>
-        <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
-      </a>
+  <!-- CTA FINAL -->
+  <section class="animate-gradient py-24 px-4 text-center text-white relative overflow-hidden">
+    <div class="absolute top-10 left-10 w-48 h-48 bg-white/10 blob blur-2xl float-slow"></div>
+    <div class="relative z-10">
+      <h2 class="font-display text-4xl md:text-6xl font-black mb-6">Pronto para vender mais?</h2>
+      <p class="mb-10 opacity-90 text-lg">Clique abaixo e fale comigo no WhatsApp agora mesmo.</p>
+      <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
+         class="inline-block bg-white text-indigo-700 px-12 py-5 rounded-full font-black text-xl hover:scale-110 transition transform shadow-2xl">💬 Falar no WhatsApp</a>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="gradient-bg py-16 px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Pronto para seu site profissional?</h2>
-    <p class="mb-8 opacity-90">Clique abaixo e fale comigo no WhatsApp agora mesmo.</p>
-    <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-       class="inline-block bg-white text-indigo-700 px-10 py-4 rounded-full font-bold text-xl hover:scale-105 transition">
-      💬 Falar no WhatsApp
-    </a>
+  <!-- CRM LINK -->
+  <section class="text-center py-12">
+    <a href="crm.html" class="text-indigo-400 hover:text-indigo-300 text-sm font-semibold">→ Acessar CRM de Leads</a>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm">
+  <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm border-t border-slate-900">
     <p>© 2024 Website Prospector — Sites profissionais gerados automaticamente.</p>
     <p class="mt-2"><a href="https://wa.me/13064035051" target="_blank" class="text-green-400 hover:underline">WhatsApp direto</a></p>
   </footer>
 
   <script>
-    // Formulário: salva via API (se disponível) e abre WhatsApp com os dados
-    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+    const API = 'http://localhost:3000';
+    const GH = 'https://allianceconsultoria.github.io/website-prospector-sites';
+
+    // Portfólio
+    const portfolio = [
+      { niche:'Nutrição', name:'Nutricionista Suelem', file:'lead-2003.html', grad:'from-emerald-500 to-teal-600' },
+      { niche:'Nutrição', name:'Clínica Grimaldi', file:'lead-4001.html', grad:'from-indigo-500 to-purple-600' },
+      { niche:'Nutrição', name:'Nutri Saúde', file:'lead-2002.html', grad:'from-pink-500 to-rose-600' },
+      { niche:'Sugestão', name:'Dentista Premium', grad:'from-cyan-500 to-blue-600', suggest:true },
+      { niche:'Sugestão', name:'Pizzaria Delivery', grad:'from-orange-500 to-red-600', suggest:true },
+      { niche:'Sugestão', name:'Advocacia Corporate', grad:'from-slate-600 to-slate-800', suggest:true },
+    ];
+    document.getElementById('portfolioGrid').innerHTML = portfolio.map(p => {
+      const inner = p.suggest
+        ? `<div class="h-44 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center">${p.name}<br><span class="text-sm opacity-80 font-normal">(modelo sob encomenda)</span></div><div class="p-5"><p class="text-slate-400 text-sm">Disponível sob medida →</p></div>`
+        : `<a href="${GH}/${p.file}" class="block h-44 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center group-hover:scale-105 transition">${p.name}</a><div class="p-5"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>`;
+      return `<div class="group glass rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300">${inner}</div>`;
+    }).join('');
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Contadores animados
+    function animateCount(el){
+      const target = +el.dataset.count; let cur=0; const step=Math.max(1,Math.floor(target/40));
+      const t=setInterval(()=>{ cur+=step; if(cur>=target){cur=target;clearInterval(t);} el.textContent=cur; }, 25);
+    }
+    const cio = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target);} }); }, {threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+    // Nav background on scroll
+    window.addEventListener('scroll', ()=>{ const n=document.getElementById('nav'); if(window.scrollY>40){ n.classList.add('bg-slate-950/90','backdrop-blur','border-b','border-slate-800'); } else { n.classList.remove('bg-slate-950/90','backdrop-blur','border-b','border-slate-800'); } });
+
+    // Formulário
+    document.getElementById('leadForm').addEventListener('submit', async function(e){
       e.preventDefault();
       const data = Object.fromEntries(new FormData(this).entries());
-      // Tenta salvar no backend
-      try {
-        await fetch('http://localhost:3000/api/lead', {
-          method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
-        });
-      } catch (err) { /* ignora se não estiver local */ }
-      // Abre WhatsApp com resumo
-      const resumo = `Olá! Quero um site profissional.%0A%0ANegócio: ${data.businessName || ''}%0ANicho: ${data.niche || ''}%0ATelefone: ${data.phone || ''}%0AEmail: ${data.email || ''}`;
-      window.open('https://wa.me/13064035051?text=' + resumo, '_blank');
+      try { await fetch(API+'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); } catch(err){}
+      const resumo = `Olá! Quero um site profissional.%0A%0ANegócio: ${data.businessName||''}%0ANicho: ${data.niche||''}%0ATelefone: ${data.phone||''}%0AEmail: ${data.email||''}`;
+      window.open('https://wa.me/13064035051?text='+resumo,'_blank');
       document.getElementById('status').classList.remove('hidden');
       this.reset();
     });
-
-    // Carrega sites dinâmicos se a API estiver acessível
-    fetch('http://localhost:3000/api/sites').then(r => r.json()).then(d => {
-      if (d.success && d.sites.length) {
-        const grid = document.getElementById('sitesGrid');
-        grid.innerHTML = d.sites.map(s => `
-          <a href="${s.url}" class="group block bg-slate-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-            <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl font-bold">Lead ${s.name}</div>
-            <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>
-          </a>`).join('');
-      }
-    }).catch(() => {});
   </script>
 </body>
 </html>
