@@ -56,6 +56,26 @@
     .divider { height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.4; }
 
     ::-webkit-scrollbar{width:9px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:8px}
+
+    /* Animações por nicho */
+    @keyframes leafGrow {0%{transform:scale(.55) rotate(-10deg);opacity:.35}50%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.55) rotate(-10deg);opacity:.35}}
+    @keyframes toothShine {0%,100%{opacity:.5}50%{opacity:1;filter:drop-shadow(0 0 12px #67e8f9)}}
+    @keyframes pizzaSpin {0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+    @keyframes scalesSway {0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+    @keyframes sparkle {0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.25)}}
+    @keyframes buildUp {0%{transform:translateY(16px);opacity:.25}50%{transform:translateY(0);opacity:1}100%{transform:translateY(16px);opacity:.25}}
+    @keyframes steam {0%{opacity:0;transform:translateY(6px)}50%{opacity:.7}100%{opacity:0;transform:translateY(-8px)}}
+    .ani-leaf{animation:leafGrow 3s ease-in-out infinite;transform-origin:bottom center}
+    .ani-tooth{animation:toothShine 2.4s ease-in-out infinite}
+    .ani-pizza{animation:pizzaSpin 10s linear infinite;transform-origin:center}
+    .ani-scales{animation:scalesSway 3.6s ease-in-out infinite;transform-origin:top center}
+    .ani-spark{animation:sparkle 1.8s ease-in-out infinite}
+    .ani-build{animation:buildUp 3s ease-in-out infinite}
+    .ani-steam{animation:steam 2.6s ease-in-out infinite}
+
+    .niche-badge{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(4px)}
+    .card .thumb{position:relative;overflow:hidden}
+    .card .thumb svg{width:64px;height:64px}
   </style>
 </head>
 <body>
@@ -101,8 +121,8 @@
 
     <!-- TRABALHOS -->
     <section id="work" class="max-w-6xl mx-auto px-6 py-28">
-      <h2 class="serif text-4xl md:text-5xl font-semibold text-center mb-3 rv">Portfólio selecionado</h2>
-      <p class="text-center text-paper/50 mb-12 rv">Cada projeto, uma experiência única e convertível.</p>
+      <h2 class="serif text-4xl md:text-5xl font-semibold text-center mb-3 rv">Exemplos por nicho</h2>
+      <p class="text-center text-paper/50 mb-12 rv">Cada segmento tem uma linguagem própria — e uma animação feita para o seu cliente se identificar.</p>
       <div id="grid" class="grid md:grid-cols-3 gap-7"></div>
     </section>
 
@@ -160,18 +180,41 @@
 
   <script>
     const API='http://localhost:3000', GH='https://allianceconsultoria.github.io/website-prospector-sites';
+
+    /* Ícones animados por nicho */
+    const ICON={
+      saude:`<svg class="ani-leaf" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 21c-5-2-8-6-8-11 4 0 8 2 8 6 0-4 4-6 8-6 0 5-3 9-8 11z"/></svg>`,
+      saude2:`<svg class="ani-tooth" viewBox="0 0 24 24" fill="#fff"><path d="M12 3c-2 0-3 1-5 1S4 5 4 8c0 3 1 4 2 7s1 4 2 4 1-2 2-2 1 2 2 2 1-2 2-4 2-4 2-7c0-3-1-4-3-4s-3-1-5-1z"/></svg>`,
+      comida:`<svg class="ani-pizza" viewBox="0 0 24 24" fill="#fff"><path d="M12 2L3 20a1 1 0 001.5 1L12 16l7.5 5A1 1 0 0021 20L12 2z"/><circle cx="12" cy="11" r="1.4" fill="#0b0b0d"/><circle cx="9" cy="14" r="1" fill="#0b0b0d"/><circle cx="15" cy="14" r="1" fill="#0b0b0d"/></svg>`,
+      juridico:`<svg class="ani-scales" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 3v18M6 7h12M6 7l-3 6h6zM18 7l-3 6h6z"/><circle cx="12" cy="3" r="1.3" fill="#fff"/></svg>`,
+      beleza:`<svg class="ani-spark" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>`,
+      imob:`<svg class="ani-build" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6"/></svg>`,
+      cafe:`<svg class="ani-steam" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M4 9h13v5a4 4 0 01-4 4H8a4 4 0 01-4-4zM17 10h2a2 2 0 010 4h-2M7 4c0 1-1 1-1 2M11 4c0 1-1 1-1 2"/></svg>`,
+    };
+
     const portfolio=[
-      {n:'Nutricionista Suelem',f:'lead-2003.html',g:'from-emerald-700 to-teal-900'},
-      {n:'Clínica Grimaldi',f:'lead-4001.html',g:'from-amber-700 to-yellow-900'},
-      {n:'Nutri Saúde',f:'lead-2002.html',g:'from-rose-800 to-pink-950'},
-      {n:'Dentista Premium',g:'from-cyan-800 to-blue-950',s:1},
-      {n:'Pizzaria Delivery',g:'from-orange-800 to-red-950',s:1},
-      {n:'Advocacia Corporate',g:'from-slate-700 to-zinc-900',s:1},
+      {n:'Nutricionista Suelem',b:'Saúde & Bem-estar',f:'lead-2003.html',g:'from-emerald-700 to-teal-900',ic:'saude'},
+      {n:'Clínica Grimaldi',b:'Estética & Beleza',f:'lead-4001.html',g:'from-rose-800 to-pink-950',ic:'beleza'},
+      {n:'Nutri Saúde',b:'Saúde & Bem-estar',f:'lead-2002.html',g:'from-amber-700 to-yellow-900',ic:'saude'},
+      {n:'Dentista Premium',b:'Odontologia',g:'from-cyan-800 to-blue-950',s:1,ic:'saude2'},
+      {n:'Pizzaria Bella',b:'Gastronomia',g:'from-orange-800 to-red-950',s:1,ic:'comida'},
+      {n:'Advocacia Corporate',b:'Jurídico',g:'from-slate-700 to-zinc-900',s:1,ic:'juridico'},
+      {n:'Imobiliária Aurora',b:'Imobiliário',g:'from-indigo-800 to-purple-950',s:1,ic:'imob'},
+      {n:'Café Aconchego',b:'Café & Doces',g:'from-amber-900 to-stone-950',s:1,ic:'cafe'},
+      {n:'Salão Encanto',b:'Beleza & Cabelo',g:'from-fuchsia-800 to-rose-950',s:1,ic:'beleza'},
     ];
     document.getElementById('grid').innerHTML=portfolio.map(p=>{
       const inner=p.s
-        ? `<div class="h-44 bg-gradient-to-br ${p.g} flex items-center justify-center text-xl font-semibold p-4 text-center text-paper/90">${p.n}<br><span class="text-sm opacity-70 font-light">(sob encomenda)</span></div><div class="p-5"><p class="text-paper/50 text-sm">Disponível sob medida →</p></div>`
-        : `<a href="${GH}/${p.f}" class="block h-44 bg-gradient-to-br ${p.g} flex items-center justify-center text-xl font-semibold p-4 text-center text-paper/90 group-hover:scale-105 transition">${p.n}</a><div class="p-5"><p class="text-paper/50 text-sm group-hover:text-gold">Ver site →</p></div>`;
+        ? `<div class="thumb h-44 bg-gradient-to-br ${p.g} flex flex-col items-center justify-center gap-3 text-center text-paper/95">
+             ${ICON[p.ic]}
+             <div class="serif text-xl font-semibold px-4">${p.n}</div>
+             <span class="niche-badge">${p.b}</span>
+           </div><div class="p-5"><p class="text-paper/50 text-sm">Disponível sob medida →</p></div>`
+        : `<a href="${GH}/${p.f}" class="thumb block h-44 bg-gradient-to-br ${p.g} flex flex-col items-center justify-center gap-3 text-center text-paper/95 group-hover:scale-105 transition">
+             ${ICON[p.ic]}
+             <div class="serif text-xl font-semibold px-4">${p.n}</div>
+             <span class="niche-badge">${p.b}</span>
+           </a><div class="p-5"><p class="text-paper/50 text-sm group-hover:text-gold">Ver site →</p></div>`;
       return `<div class="group card overflow-hidden hover:-translate-y-2 transition duration-300">${inner}</div>`;
     }).join('');
 
