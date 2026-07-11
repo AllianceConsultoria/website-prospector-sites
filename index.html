@@ -3,210 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Prospector — Seu site profissional que vende</title>
-  <meta name="description" content="Sites profissionais, responsivos e focados em conversão. Qualquer nicho. Pronto em minutos. Fale no WhatsApp.">
+  <title>Website Prospector — Sites que vendem, prontos em minutos</title>
+  <meta name="description" content="Website Prospector: sites profissionais, responsivos e focados em conversão. Qualquer nicho. Pronto em minutos.">
   <meta property="og:title" content="Website Prospector — Sites que convertem">
-  <meta property="og:description" content="Sites profissionais que vendem. Qualquer nicho. Pronto em minutos.">
+  <meta property="og:description" content="Agência de sites que vendem. Qualquer nicho. Pronto em minutos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://allianceconsultoria.github.io/website-prospector-sites/">
   <meta property="og:image" content="https://allianceconsultoria.github.io/website-prospector-sites/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --p: #6366f1; --s: #ec4899; }
-    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
-    .font-display { font-family: 'Poppins', sans-serif; }
-    @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-    .animate-gradient { background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b); background-size: 400% 400%; animation: gradientShift 14s ease infinite; }
-    @keyframes float { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-18px) rotate(2deg)} }
-    .float { animation: float 6s ease-in-out infinite; }
-    @keyframes floatSlow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-    .float-slow { animation: floatSlow 8s ease-in-out infinite; }
-    @keyframes blob { 0%,100%{border-radius:42% 58% 63% 37% / 41% 44% 56% 59%} 50%{border-radius:58% 42% 37% 63% / 56% 59% 41% 44%} }
-    .blob { animation: blob 12s ease-in-out infinite; }
-    @keyframes fadeup { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
-    .reveal { opacity:0; }
-    .reveal.show { animation: fadeup 0.9s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes pulseRing { 0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)} 70%{box-shadow:0 0 0 18px rgba(34,197,94,0)} 100%{box-shadow:0 0 0 0 rgba(34,197,94,0)} }
-    .pulse-ring { animation: pulseRing 2.2s infinite; }
-    .glass { background: rgba(255,255,255,.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); }
-    html { scroll-behavior: smooth; }
-    ::-webkit-scrollbar { width: 9px; } ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 8px; }
+    :root { --ink:#0a0a0f; --violet:#7c3aed; --pink:#ec4899; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:var(--ink); color:#e7e7ee; overflow-x:hidden; }
+    .display { font-family:'Poppins',sans-serif; }
+    html { scroll-behavior:smooth; }
+
+    /* Aurora / gradiente de fundo estilo agência */
+    .aurora { position:fixed; inset:0; z-index:0; overflow:hidden; }
+    .aurora span { position:absolute; border-radius:50%; filter:blur(90px); opacity:.55; }
+    .a1 { width:50vw; height:50vw; background:#7c3aed; top:-10vw; left:-10vw; animation:drift1 18s ease-in-out infinite; }
+    .a2 { width:45vw; height:45vw; background:#ec4899; bottom:-15vw; right:-10vw; animation:drift2 22s ease-in-out infinite; }
+    .a3 { width:35vw; height:35vw; background:#06b6d4; top:30vh; left:40vw; animation:drift3 26s ease-in-out infinite; }
+    @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(8vw,6vh)} }
+    @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-6vw,-8vh)} }
+    @keyframes drift3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-10vw,4vh)} }
+
+    /* Grid sutil */
+    .grid-overlay { position:fixed; inset:0; z-index:1; background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; mask-image:radial-gradient(circle at 50% 30%,black,transparent 75%); }
+
+    .wrap { position:relative; z-index:2; }
+
+    /* Hero tipografia em camadas */
+    .hero-title { font-size:clamp(2.6rem,8vw,6.5rem); line-height:.98; font-weight:900; letter-spacing:-.03em; }
+    .grad-text { background:linear-gradient(100deg,#a78bfa,#ec4899,#fbbf24); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    @keyframes riseIn { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+    .rise { opacity:0; animation:riseIn .9s cubic-bezier(.2,.8,.2,1) forwards; }
+    .d1{animation-delay:.1s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.7s}.d5{animation-delay:.9s}
+
+    @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+    .flo { animation:floatY 6s ease-in-out infinite; }
+
+    /* Scroll reveal */
+    @keyframes revealUp { from{opacity:0;transform:translateY(50px)} to{opacity:1;transform:translateY(0)} }
+    .rev { opacity:0; }
+    .rev.in { animation:revealUp 1s cubic-bezier(.2,.8,.2,1) forwards; }
+    .rev.in.delay1{animation-delay:.15s}.rev.in.delay2{animation-delay:.3s}.rev.in.delay3{animation-delay:.45s}
+
+    /* Cards */
+    .card { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); backdrop-filter:blur(10px); border-radius:24px; transition:.4s; }
+    .card:hover { transform:translateY(-8px); border-color:rgba(168,139,250,.4); box-shadow:0 20px 50px -20px rgba(124,58,237,.5); }
+
+    /* Botão */
+    .btn-primary { background:linear-gradient(100deg,#7c3aed,#ec4899); color:#fff; font-weight:700; border-radius:999px; padding:1rem 2.2rem; display:inline-block; transition:.3s; }
+    .btn-primary:hover { transform:scale(1.06); box-shadow:0 10px 40px -10px rgba(236,72,153,.6); }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)} 70%{box-shadow:0 0 0 16px rgba(34,197,94,0)} 100%{box-shadow:0 0 0 0 rgba(34,197,94,0)} }
+    .pulse { animation:pulse 2.2s infinite; }
+
+    .chip { display:inline-block; padding:.4rem 1rem; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); font-size:.8rem; }
+
+    ::-webkit-scrollbar{width:9px}::-webkit-scrollbar-thumb{background:#7c3aed;border-radius:8px}
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body>
 
-  <!-- NAV -->
-  <nav class="fixed w-full top-0 z-50 transition-all duration-300" id="nav">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="font-display font-extrabold text-xl tracking-tight">🌐 Website Prospector</div>
-      <div class="flex items-center gap-3">
-        <a href="#portfolio" class="hidden sm:block text-sm text-slate-300 hover:text-white transition">Portfólio</a>
-        <a href="#crm" class="hidden sm:block text-sm text-slate-300 hover:text-white transition">CRM</a>
-        <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-           class="pulse-ring bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg">💬 WhatsApp</a>
+  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="grid-overlay"></div>
+
+  <div class="wrap">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="nav">
+      <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+        <div class="display font-extrabold text-lg">🌐 Website Prospector</div>
+        <div class="flex items-center gap-4">
+          <a href="#work" class="hidden sm:block text-sm text-white/70 hover:text-white transition">Trabalhos</a>
+          <a href="#process" class="hidden sm:block text-sm text-white/70 hover:text-white transition">Como funciona</a>
+          <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20um%20site%20profissional%20que%20vende." target="_blank" class="pulse btn-primary text-sm px-5 py-2.5">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- HERO -->
-  <section class="animate-gradient relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <div class="absolute top-20 left-10 w-64 h-64 bg-white/10 blob blur-2xl float-slow"></div>
-    <div class="absolute bottom-10 right-10 w-80 h-80 bg-pink-300/10 blob blur-3xl float"></div>
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-      <div class="float text-7xl mb-6">🚀</div>
-      <span class="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 text-white/90">
-        ✨ Sites que convertem visitantes em clientes
-      </span>
-      <h1 class="font-display text-5xl md:text-7xl font-black leading-[1.05] mb-6 drop-shadow-2xl">
-        Seu site profissional.<br><span class="text-yellow-300">Pronto em minutos.</span>
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-5 pt-24">
+      <div class="chip rise d1 mb-6 flo">✨ Agência de sites que convertem</div>
+      <h1 class="display hero-title rise d2 max-w-4xl">
+        Sites que <span class="grad-text">vendem</span>.<br>Feitos em <span class="grad-text">minutos</span>.
       </h1>
-      <p class="text-lg md:text-2xl opacity-95 mb-10 max-w-2xl mx-auto font-light">
-        Aumentamos suas vendas com um site moderno, responsivo e feito para fechar negócios.
-        <strong>Qualquer nicho.</strong> Sem complicação.
+      <p class="rise d3 mt-6 text-lg md:text-xl text-white/70 max-w-xl font-light">
+        Prospectamos, criamos e publicamos sites profissionais para qualquer nicho.
+        Seu negócio merece um site que transforma visitante em cliente.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#formulario" class="bg-white text-indigo-700 px-10 py-4 rounded-full font-black text-lg hover:scale-110 transition transform shadow-2xl">
-          🚀 Quero meu site agora
-        </a>
-        <a href="#portfolio" class="glass text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition">
-          Ver portfólio →
-        </a>
+      <div class="rise d4 mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#form" class="btn-primary text-lg">🚀 Quero meu site agora</a>
+        <a href="#work" class="card px-8 py-4 rounded-full font-semibold text-white/90 hover:text-white transition">Ver trabalhos →</a>
       </div>
-      <!-- Stats -->
-      <div class="mt-14 grid grid-cols-3 gap-6 max-w-lg mx-auto">
-        <div class="text-center"><div class="font-display text-3xl font-black" data-count="14">0</div><div class="text-xs opacity-80">Leads qualificados</div></div>
-        <div class="text-center"><div class="font-display text-3xl font-black" data-count="6">0</div><div class="text-xs opacity-80">Sites publicados</div></div>
-        <div class="text-center"><div class="font-display text-3xl font-black" data-count="100">0</div><div class="text-xs opacity-80">% Responsivo</div></div>
+      <div class="rise d5 mt-16 flex gap-10 text-center">
+        <div><div class="display text-3xl font-black grad-text" data-c="14">0</div><div class="text-xs text-white/60">Leads qualificados</div></div>
+        <div><div class="display text-3xl font-black grad-text" data-c="6">0</div><div class="text-xs text-white/60">Sites publicados</div></div>
+        <div><div class="display text-3xl font-black grad-text" data-c="100">0</div><div class="text-xs text-white/60">% Responsivo</div></div>
       </div>
-    </div>
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-2xl float-slow">⌄</div>
-  </section>
+    </section>
 
-  <!-- BENEFÍCIOS -->
-  <section class="max-w-6xl mx-auto px-4 py-24">
-    <h2 class="font-display text-3xl md:text-5xl font-black text-center mb-14 reveal">Por que seu negócio precisa de nós</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition cursor-default">
-        <div class="text-5xl mb-4 float-slow">⚡</div>
-        <h3 class="font-display font-bold text-xl mb-3">Rápido como nunca</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Seu site fica pronto em minutos, não em semanas. Enquanto pensa, a concorrência já vende.</p>
+    <!-- TRABALHOS / PORTFÓLIO -->
+    <section id="work" class="max-w-6xl mx-auto px-5 py-28">
+      <h2 class="display text-3xl md:text-5xl font-black text-center mb-3 rev">Nossos trabalhos</h2>
+      <p class="text-center text-white/60 mb-12 rev">Sites reais que criamos — e o que fazemos para o seu nicho.</p>
+      <div id="grid" class="grid md:grid-cols-3 gap-7"></div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="process" class="max-w-5xl mx-auto px-5 py-28">
+      <h2 class="display text-3xl md:text-5xl font-black text-center mb-14 rev">Como funciona</h2>
+      <div class="grid md:grid-cols-3 gap-7">
+        <div class="card p-8 rev"><div class="text-4xl mb-4">🔍</div><h3 class="display font-bold text-xl mb-2">1. Prospectamos</h3><p class="text-white/60 text-sm">Encontramos negócios reais no seu nicho com site defasado.</p></div>
+        <div class="card p-8 rev delay1"><div class="text-4xl mb-4">🎨</div><h3 class="display font-bold text-xl mb-2">2. Criamos</h3><p class="text-white/60 text-sm">Geramos um site moderno, responsivo e focado em conversão.</p></div>
+        <div class="card p-8 rev delay2"><div class="text-4xl mb-4">🚀</div><h3 class="display font-bold text-xl mb-2">3. Publicamos</h3><p class="text-white/60 text-sm">Seu site no ar em minutos, com botão de WhatsApp para vender.</p></div>
       </div>
-      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition" style="transition-delay:.1s">
-        <div class="text-5xl mb-4 float-slow">🎯</div>
-        <h3 class="font-display font-bold text-xl mb-3">Focado em vender</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Botões de WhatsApp, chamadas e CTAs estrategicamente posicionados para converter.</p>
+    </section>
+
+    <!-- DEPOIMENTO -->
+    <section class="max-w-3xl mx-auto px-5 py-28">
+      <div class="card p-10 text-center rev">
+        <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+        <p class="display text-xl md:text-2xl italic mb-5">"Meu telefone não parou de tocar. O site mudou meu negócio em 48h."</p>
+        <p class="text-white/50 text-sm">— Cliente · Nutrição</p>
       </div>
-      <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition" style="transition-delay:.2s">
-        <div class="text-5xl mb-4 float-slow">📱</div>
-        <h3 class="font-display font-bold text-xl mb-3">Lindo no celular</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Mais de 70% dos clientes acessam pelo celular. Seu site será perfeito em qualquer tela.</p>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section id="form" class="max-w-2xl mx-auto px-5 py-28">
+      <div class="card p-8 md:p-10 rev">
+        <h2 class="display text-3xl font-black mb-2 text-center">Peça seu site</h2>
+        <p class="text-white/60 text-center mb-8 text-sm">Preencha e falamos no WhatsApp em minutos.</p>
+        <form id="leadForm" class="space-y-4">
+          <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500">
+          <input name="name" placeholder="Seu nome" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500">
+          <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500">
+          <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500">
+          <input name="niche" placeholder="Nicho (ex: dentista, pizzaria)" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500">
+          <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-violet-500"></textarea>
+          <button type="submit" class="w-full btn-primary py-4 text-lg">💬 Enviar e falar no WhatsApp</button>
+          <p id="status" class="text-center text-sm text-green-400 hidden">Enviado! Abrindo WhatsApp...</p>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PORTFÓLIO -->
-  <section id="portfolio" class="max-w-6xl mx-auto px-4 py-24">
-    <h2 class="font-display text-3xl md:text-5xl font-black text-center mb-4 reveal">Nosso trabalho por nicho</h2>
-    <p class="text-center text-slate-400 mb-12 reveal">Veja sites reais que criamos — e o que podemos fazer para o SEU nicho.</p>
-    <div id="portfolioGrid" class="grid md:grid-cols-3 gap-7"></div>
-  </section>
+    <!-- CTA FINAL -->
+    <section class="text-center py-28 px-5">
+      <h2 class="display text-4xl md:text-6xl font-black mb-6 rev">Pronto para <span class="grad-text">vender mais</span>?</h2>
+      <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank" class="btn-primary text-xl pulse">💬 Falar no WhatsApp</a>
+    </section>
 
-  <!-- PROVA SOCIAL / DEPOIMENTO -->
-  <section class="max-w-4xl mx-auto px-4 py-24">
-    <div class="glass rounded-3xl p-10 text-center reveal">
-      <div class="text-5xl mb-4">⭐⭐⭐⭐⭐</div>
-      <p class="font-display text-xl md:text-2xl italic mb-6">"Em 2 dias meu telefone não parou de tocar. O site mudou meu negócio."</p>
-      <p class="text-slate-400 text-sm">— Cliente satisfeito · Nutrição</p>
-    </div>
-  </section>
+    <section class="text-center py-10">
+      <a href="crm.html" class="text-violet-300 hover:text-violet-200 text-sm font-semibold">→ Acessar CRM de Leads</a>
+    </section>
 
-  <!-- FORMULÁRIO -->
-  <section id="formulario" class="max-w-2xl mx-auto px-4 py-24">
-    <div class="glass rounded-3xl p-8 md:p-10 reveal">
-      <h2 class="font-display text-3xl font-black mb-2 text-center">Peça seu site profissional</h2>
-      <p class="text-slate-400 text-center mb-8 text-sm">Preencha e falamos no WhatsApp em minutos. Simples assim.</p>
-      <form id="leadForm" class="space-y-4">
-        <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
-        <input name="name" placeholder="Seu nome" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
-        <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
-        <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
-        <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-600 transition">
-        <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/60 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition"></textarea>
-        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-xl text-lg transition transform hover:scale-[1.02] shadow-xl">💬 Enviar e falar no WhatsApp</button>
-        <p id="status" class="text-center text-sm text-green-400 hidden">Enviado! Abrindo WhatsApp...</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="animate-gradient py-24 px-4 text-center text-white relative overflow-hidden">
-    <div class="absolute top-10 left-10 w-48 h-48 bg-white/10 blob blur-2xl float-slow"></div>
-    <div class="relative z-10">
-      <h2 class="font-display text-4xl md:text-6xl font-black mb-6">Pronto para vender mais?</h2>
-      <p class="mb-10 opacity-90 text-lg">Clique abaixo e fale comigo no WhatsApp agora mesmo.</p>
-      <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-         class="inline-block bg-white text-indigo-700 px-12 py-5 rounded-full font-black text-xl hover:scale-110 transition transform shadow-2xl">💬 Falar no WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- CRM LINK -->
-  <section class="text-center py-12">
-    <a href="crm.html" class="text-indigo-400 hover:text-indigo-300 text-sm font-semibold">→ Acessar CRM de Leads</a>
-  </section>
-
-  <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm border-t border-slate-900">
-    <p>© 2024 Website Prospector — Sites profissionais gerados automaticamente.</p>
-    <p class="mt-2"><a href="https://wa.me/13064035051" target="_blank" class="text-green-400 hover:underline">WhatsApp direto</a></p>
-  </footer>
+    <footer class="border-t border-white/10 text-center py-8 text-white/40 text-sm">
+      <p>© 2024 Website Prospector — Sites profissionais gerados automaticamente.</p>
+    </footer>
+  </div>
 
   <script>
-    const API = 'http://localhost:3000';
-    const GH = 'https://allianceconsultoria.github.io/website-prospector-sites';
-
-    // Portfólio
-    const portfolio = [
-      { niche:'Nutrição', name:'Nutricionista Suelem', file:'lead-2003.html', grad:'from-emerald-500 to-teal-600' },
-      { niche:'Nutrição', name:'Clínica Grimaldi', file:'lead-4001.html', grad:'from-indigo-500 to-purple-600' },
-      { niche:'Nutrição', name:'Nutri Saúde', file:'lead-2002.html', grad:'from-pink-500 to-rose-600' },
-      { niche:'Sugestão', name:'Dentista Premium', grad:'from-cyan-500 to-blue-600', suggest:true },
-      { niche:'Sugestão', name:'Pizzaria Delivery', grad:'from-orange-500 to-red-600', suggest:true },
-      { niche:'Sugestão', name:'Advocacia Corporate', grad:'from-slate-600 to-slate-800', suggest:true },
+    const API='http://localhost:3000', GH='https://allianceconsultoria.github.io/website-prospector-sites';
+    const portfolio=[
+      {n:'Nutricionista Suelem',f:'lead-2003.html',g:'from-emerald-500 to-teal-600'},
+      {n:'Clínica Grimaldi',f:'lead-4001.html',g:'from-violet-500 to-purple-600'},
+      {n:'Nutri Saúde',f:'lead-2002.html',g:'from-pink-500 to-rose-600'},
+      {n:'Dentista Premium',g:'from-cyan-500 to-blue-600',s:1},
+      {n:'Pizzaria Delivery',g:'from-orange-500 to-red-600',s:1},
+      {n:'Advocacia Corporate',g:'from-slate-600 to-slate-800',s:1},
     ];
-    document.getElementById('portfolioGrid').innerHTML = portfolio.map(p => {
-      const inner = p.suggest
-        ? `<div class="h-44 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center">${p.name}<br><span class="text-sm opacity-80 font-normal">(modelo sob encomenda)</span></div><div class="p-5"><p class="text-slate-400 text-sm">Disponível sob medida →</p></div>`
-        : `<a href="${GH}/${p.file}" class="block h-44 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center group-hover:scale-105 transition">${p.name}</a><div class="p-5"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>`;
-      return `<div class="group glass rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300">${inner}</div>`;
+    document.getElementById('grid').innerHTML=portfolio.map(p=>{
+      const inner=p.s
+        ? `<div class="h-44 bg-gradient-to-br ${p.g} flex items-center justify-center text-xl font-bold p-4 text-center">${p.n}<br><span class="text-sm opacity-80 font-normal">(modelo sob encomenda)</span></div><div class="p-5"><p class="text-white/50 text-sm">Disponível sob medida →</p></div>`
+        : `<a href="${GH}/${p.f}" class="block h-44 bg-gradient-to-br ${p.g} flex items-center justify-center text-xl font-bold p-4 text-center group-hover:scale-105 transition">${p.n}</a><div class="p-5"><p class="text-white/50 text-sm group-hover:text-violet-300">Ver site →</p></div>`;
+      return `<div class="group card overflow-hidden hover:-translate-y-2 transition duration-300">${inner}</div>`;
     }).join('');
 
     // Scroll reveal
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-    }, {threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+    document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 
-    // Contadores animados
-    function animateCount(el){
-      const target = +el.dataset.count; let cur=0; const step=Math.max(1,Math.floor(target/40));
-      const t=setInterval(()=>{ cur+=step; if(cur>=target){cur=target;clearInterval(t);} el.textContent=cur; }, 25);
-    }
-    const cio = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target);} }); }, {threshold:.5});
-    document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+    // Contadores
+    function anim(el){const t=+el.dataset.c;let c=0;const s=Math.max(1,Math.floor(t/40));const i=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(i);}el.textContent=c;},25);}
+    const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);cio.unobserve(e.target);}}),{threshold:.5});
+    document.querySelectorAll('[data-c]').forEach(el=>cio.observe(el));
 
-    // Nav background on scroll
-    window.addEventListener('scroll', ()=>{ const n=document.getElementById('nav'); if(window.scrollY>40){ n.classList.add('bg-slate-950/90','backdrop-blur','border-b','border-slate-800'); } else { n.classList.remove('bg-slate-950/90','backdrop-blur','border-b','border-slate-800'); } });
+    // Nav
+    window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(window.scrollY>40)n.classList.add('bg-black/80','backdrop-blur','border-b','border-white/10');else n.classList.remove('bg-black/80','backdrop-blur','border-b','border-white/10');});
 
-    // Formulário
-    document.getElementById('leadForm').addEventListener('submit', async function(e){
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(this).entries());
-      try { await fetch(API+'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); } catch(err){}
-      const resumo = `Olá! Quero um site profissional.%0A%0ANegócio: ${data.businessName||''}%0ANicho: ${data.niche||''}%0ATelefone: ${data.phone||''}%0AEmail: ${data.email||''}`;
-      window.open('https://wa.me/13064035051?text='+resumo,'_blank');
-      document.getElementById('status').classList.remove('hidden');
-      this.reset();
+    // Form
+    document.getElementById('leadForm').addEventListener('submit',async e=>{
+      e.preventDefault();const d=Object.fromEntries(new FormData(e.target).entries());
+      try{await fetch(API+'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});}catch(_){}
+      const r=`Olá! Quero um site profissional.%0A%0ANegócio: ${d.businessName||''}%0ANicho: ${d.niche||''}%0ATelefone: ${d.phone||''}%0AEmail: ${d.email||''}`;
+      window.open('https://wa.me/13064035051?text='+r,'_blank');
+      document.getElementById('status').classList.remove('hidden');e.target.reset();
     });
   </script>
 </body>
