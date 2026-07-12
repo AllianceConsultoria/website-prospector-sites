@@ -1,225 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Prospector — CRM & Portfólio</title>
-  <meta name="description" content="CRM de leads e portfólio de sites profissionais. Qualquer nicho. Pronto em minutos.">
-  <meta property="og:title" content="Website Prospector — Sites que convertem">
-  <meta property="og:description" content="CRM de leads qualificados + portfólio por nicho. Sites profissionais prontos em minutos.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://allianceconsultoria.github.io/website-prospector-sites/crm.html">
-  <meta property="og:image" content="https://allianceconsultoria.github.io/website-prospector-sites/og-image.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .font-display { font-family: 'Poppins', sans-serif; }
-    @keyframes gradient { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-    .animate-gradient { background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b); background-size: 400% 400%; animation: gradient 12s ease infinite; }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-    .float { animation: float 5s ease-in-out infinite; }
-    @keyframes fadeup { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    .fadeup { animation: fadeup 0.8s ease both; }
-    .tierA { border-left: 4px solid #ef4444; }
-    .tierB { border-left: 4px solid #f59e0b; }
-    .tierC { border-left: 4px solid #9ca3af; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Prospector — CRM de Leads & Portfório Premium</title>
+<meta name="description" content="CRM de leads qualificados + portfólio de sites premium por nicho. Acompanhe conversões e veja exemplos reais que vendem pelo WhatsApp.">
+<meta name="keywords" content="CRM de leads, portfólio de sites, sites premium, geração de leads, qualificação de leads, sites por nicho, conversão de vendas">
+<meta name="author" content="Website Prospector">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="language" content="pt-BR">
+<link rel="canonical" href="https://allianceconsultoria.is-a.dev/crm.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Website Prospector">
+<meta property="og:title" content="Website Prospector — CRM & Portfólio Premium">
+<meta property="og:description" content="CRM de leads qualificados + portfólio por nicho. Sites premium prontos em minutos.">
+<meta property="og:url" content="https://allianceconsultoria.is-a.dev/crm.html">
+<meta property="og:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website Prospector — CRM & Portfólio">
+<meta name="twitter:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+<link rel="preconnect" href="https://wa.me">
+<style>
+:root{--gold:#c9a86a;--gold-soft:#e7d3a8;--ink:#0b0b0d;--paper:#f5f1e8;--muted:#a59f90}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.9rem 1.8rem;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 30px rgba(201,168,106,.25)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(201,168,106,.4)}
+.cta-float{position:fixed;bottom:20px;right:20px;z-index:60;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+nav{position:fixed;top:0;width:100%;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,13,.6);border-bottom:1px solid rgba(255,255,255,.07)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 15%,#8a6d3b,transparent 55%),linear-gradient(135deg,#c9a86a,#7c5e2e)}
+.hero .wrap{position:relative;z-index:5;padding-top:6rem;color:#0b0b0d;text-align:center}
+.hero h1{font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;line-height:1.05}
+.hero p{font-size:clamp(1.05rem,2.4vw,1.3rem);margin:1.2rem auto 2rem;max-width:40rem;opacity:.85}
+.hero .btn{background:#0b0b0d;color:var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:2.5rem}
+.stats .n{font-family:Georgia,serif;font-size:2.6rem;font-weight:700}
+.stats .l{font-size:.85rem;opacity:.8}
+section{padding:5rem 0}
+h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;text-align:center;margin-bottom:1rem}
+.sub{text-align:center;color:var(--muted);margin-bottom:3rem;max-width:42rem;margin-left:auto;margin-right:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.3rem}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;transition:transform .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .thumb{height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#fff;text-align:center;padding:.8rem}
+.card .nm{font-family:Georgia,serif;font-size:1.15rem;font-weight:600}
+.card .ft{padding:.9rem 1.1rem;font-size:.85rem;color:var(--muted)}
+.crmbox{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:1.4rem;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{text-align:left;padding:.6rem;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.1);font-weight:600}
+td{padding:.6rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.tierA{border-left:3px solid #ef4444}.tierB{border-left:3px solid #f59e0b}.tierC{border-left:3px solid #9ca3af}
+select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:.4rem .5rem;color:var(--paper);font-size:.78rem;font-family:inherit}
+form{max-width:520px;margin:0 auto;display:grid;gap:1rem}
+input,textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.9rem 1rem;color:var(--paper);font-size:1rem;font-family:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:2.5rem 0;text-align:center;color:var(--muted);font-size:.85rem;position:relative;z-index:5}
+footer a{color:var(--gold)}
+@media(max-width:600px){.cta-float{font-size:.82rem;padding:.7rem 1rem}}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body>
+<nav><div class="wrap">
+  <span class="logo">Website Prospector</span>
+  <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20premium%20para%20o%20meu%20neg%C3%B3cio." class="btn" style="padding:.6rem 1.1rem;font-size:.85rem">💬 WhatsApp</a>
+</div></nav>
 
-  <!-- NAV -->
-  <nav class="fixed w-full top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="font-display font-extrabold text-xl">🌐 Website Prospector</div>
-      <div class="flex gap-3">
-        <a href="#portfolio" class="text-sm text-slate-300 hover:text-white hidden sm:block">Portfólio</a>
-        <a href="#crm" class="text-sm text-slate-300 hover:text-white hidden sm:block">CRM</a>
-        <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-           class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">💬 WhatsApp</a>
-      </div>
-    </div>
-  </nav>
+<header class="hero"><div class="wrap">
+  <h1>Sites que vendem. Feitos em minutos.</h1>
+  <p>Prospectamos, criamos e publicamos sites premium para qualquer nicho. Seu negócio merece um site que converte visitantes em clientes.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="#formulario" class="btn">🚀 Quero meu site agora</a>
+    <a href="#portfolio" class="btn" style="background:transparent;color:#0b0b0d;border:2px solid #0b0b0d">Ver portfólio</a>
+  </div>
+  <div class="stats">
+    <div><div class="n" id="statLeads">0</div><div class="l">Leads qualificados</div></div>
+    <div><div class="n" id="statSites">10</div><div class="l">Sites publicados</div></div>
+    <div><div class="n">100%</div><div class="l">Responsivo</div></div>
+  </div>
+</div></header>
 
-  <!-- HERO ANIMADO -->
-  <section class="animate-gradient pt-28 pb-24 px-4 text-center text-white">
-    <div class="max-w-4xl mx-auto">
-      <div class="float text-6xl mb-4">🚀</div>
-      <h1 class="font-display text-4xl md:text-6xl font-extrabold leading-tight mb-6 fadeup">
-        Sites que vendem.<br>Feitos em minutos.
-      </h1>
-      <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto fadeup">
-        Prospectamos, criamos e publicamos sites profissionais para qualquer nicho.
-        Seu negócio merece um site que converte visitantes em clientes.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center fadeup">
-        <a href="#formulario" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition">
-          🚀 Quero meu site agora
-        </a>
-        <a href="#portfolio" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white/10 transition">
-          Ver portfólio
-        </a>
-      </div>
-      <div class="mt-10 flex justify-center gap-8 text-sm opacity-80">
-        <div><span class="font-bold text-2xl block" id="statLeads">0</span> Leads qualificados</div>
-        <div><span class="font-bold text-2xl block" id="statSites">0</span> Sites publicados</div>
-        <div><span class="font-bold text-2xl block">100%</span> Responsivo</div>
-      </div>
-    </div>
-  </section>
+<section id="portfolio"><div class="wrap">
+  <h2>Nosso trabalho por nicho</h2>
+  <p class="sub">Exemplos reais de sites que criamos. Clique e veja.</p>
+  <div id="portfolioGrid" class="grid"></div>
+</div></section>
 
-  <!-- PORFÓLIO POR NICHO -->
-  <section id="portfolio" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="font-display text-3xl font-extrabold text-center mb-4">Nosso trabalho por nicho</h2>
-    <p class="text-center text-slate-400 mb-8">Exemplos reais de sites que criamos. Clique e veja.</p>
-    <div id="portfolioGrid" class="grid md:grid-cols-3 gap-6"></div>
-  </section>
+<section id="crm"><div class="wrap">
+  <h2>CRM de Leads</h2>
+  <p class="sub">Leads rankeados por potencial de conversão. Marque o status conforme avança a venda.</p>
+  <div class="crmbox">
+    <table>
+      <thead><tr><th>#</th><th>Lead</th><th>Contato</th><th>Score</th><th>Tier</th><th>Status</th><th>Ação</th></tr></thead>
+      <tbody id="crmBody"></tbody>
+    </table>
+  </div>
+  <p id="crmStatus" class="sub" style="margin-top:1rem">Carregando leads...</p>
+</div></section>
 
-  <!-- CRM -->
-  <section id="crm" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="font-display text-3xl font-extrabold text-center mb-4">CRM de Leads</h2>
-    <p class="text-center text-slate-400 mb-8">Leads rankeados por potencial de conversão. Marque o status conforme avança a venda.</p>
-    <div class="bg-slate-900 rounded-3xl p-6 overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="text-slate-400 border-b border-slate-800">
-            <th class="text-left p-2">#</th>
-            <th class="text-left p-2">Lead</th>
-            <th class="text-left p-2">Contato</th>
-            <th class="text-left p-2">Score</th>
-            <th class="text-left p-2">Tier</th>
-            <th class="text-left p-2">Status</th>
-            <th class="text-left p-2">Ação</th>
-          </tr>
-        </thead>
-        <tbody id="crmBody"></tbody>
-      </table>
-    </div>
-    <p id="crmStatus" class="text-center text-slate-500 text-sm mt-4">Carregando leads...</p>
-  </section>
+<section id="formulario"><div class="wrap">
+  <h2 style="color:var(--gold)">Peça seu site premium</h2>
+  <p class="sub">Preencha e falamos no WhatsApp em minutos.</p>
+  <form id="leadForm">
+    <input name="businessName" required placeholder="Nome do seu negócio *">
+    <input name="name" placeholder="Seu nome">
+    <input name="phone" placeholder="WhatsApp (com DDD)">
+    <input name="email" type="email" placeholder="E-mail">
+    <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)">
+    <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3"></textarea>
+    <button type="submit" class="btn">💬 Enviar e falar no WhatsApp</button>
+    <p id="status" style="color:var(--gold);text-align:center;display:none">Enviado! Abrindo WhatsApp...</p>
+  </form>
+</div></section>
 
-  <!-- FORMULÁRIO -->
-  <section id="formulario" class="max-w-2xl mx-auto px-4 py-16">
-    <div class="bg-slate-900 rounded-3xl p-8">
-      <h2 class="font-display text-2xl font-extrabold mb-2 text-center">Peça seu site profissional</h2>
-      <p class="text-slate-400 text-center mb-6 text-sm">Preencha e falamos no WhatsApp em minutos.</p>
-      <form id="leadForm" class="space-y-4">
-        <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="name" placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
-        <input name="niche" placeholder="Nicho (ex: dentista, pizzaria, advocacia)" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-600">
-        <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"></textarea>
-        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl text-lg transition">💬 Enviar e falar no WhatsApp</button>
-        <p id="status" class="text-center text-sm text-green-400 hidden">Enviado! Abrindo WhatsApp...</p>
-      </form>
-    </div>
-  </section>
+<section style="text-align:center;background:radial-gradient(circle at 50% 50%,#8a6d3b,transparent 60%),linear-gradient(135deg,#c9a86a,#7c5e2e);color:#0b0b0d;padding:4rem 0">
+  <div class="wrap">
+    <h2 style="color:#0b0b0d">Pronto para seu site premium?</h2>
+    <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20premium%20para%20o%20meu%20neg%C3%B3cio." class="btn" style="background:#0b0b0d;color:var(--gold)">💬 Falar no WhatsApp</a>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="animate-gradient py-16 px-4 text-center text-white">
-    <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-4">Pronto para seu site profissional?</h2>
-    <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." target="_blank"
-       class="inline-block bg-white text-indigo-700 px-10 py-4 rounded-full font-bold text-xl hover:scale-105 transition">💬 Falar no WhatsApp</a>
-  </section>
+<footer><div class="wrap">
+  © <span id="y"></span> Website Prospector · Concierge Digital de Sites<br>
+  <a href="https://wa.me/13064035051">WhatsApp direto</a>
+</div></footer>
 
-  <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm">
-    <p>© 2024 Website Prospector — Sites profissionais gerados automaticamente.</p>
-    <p class="mt-2"><a href="https://wa.me/13064035051" target="_blank" class="text-green-400 hover:underline">WhatsApp direto</a></p>
-  </footer>
+<a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20premium%20para%20o%20meu%20neg%C3%B3cio." class="cta-float">💬 WhatsApp</a>
 
-  <script>
-    const API = 'http://localhost:3000';
-    const GH = 'https://allianceconsultoria.github.io/website-prospector-sites';
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+  const API='http://localhost:3000';
+  const GH='https://allianceconsultoria.is-a.dev';
+  const portfolio=[
+    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',g:'linear-gradient(135deg,#0e7490,#082f49)'},
+    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',g:'linear-gradient(135deg,#c2410c,#7f1d1d)'},
+    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',g:'linear-gradient(135deg,#334155,#0f172a)'},
+    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',g:'linear-gradient(135deg,#5b21b6,#2e1065)'},
+    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',g:'linear-gradient(135deg,#78350f,#1c1917)'},
+    {n:'Salão Encanto',b:'Beleza',f:'lead-5006.html',g:'linear-gradient(135deg,#be185d,#831843)'},
+    {n:'Nutri Vida',b:'Nutrição',f:'lead-5007.html',g:'linear-gradient(135deg,#15803d,#064e3b)'},
+    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',g:'linear-gradient(135deg,#db2777,#831843)'},
+    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',g:'linear-gradient(135deg,#b45309,#78350f)'},
+    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',g:'linear-gradient(135deg,#0d9488,#134e4a)'}
+  ];
+  document.getElementById('portfolioGrid').innerHTML=portfolio.map(p=>`
+    <div class="card">
+      <a href="${GH}/${p.f}" class="thumb block" style="background:${p.g}">
+        <div class="nm">${p.n}</div><span style="font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85">${p.b}</span>
+      </a>
+      <div class="ft"><a href="${GH}/${p.f}">Ver site →</a></div>
+    </div>`).join('');
 
-    // Portfólio por nicho (exemplos reais + sugestões)
-    const portfolio = [
-      { niche: 'Nutrição', name: 'Nutricionista Suelem', file: 'lead-2003.html', grad: 'from-emerald-500 to-teal-600' },
-      { niche: 'Nutrição', name: 'Clínica Grimaldi', file: 'lead-4001.html', grad: 'from-indigo-500 to-purple-600' },
-      { niche: 'Nutrição', name: 'Nutri Saúde', file: 'lead-2002.html', grad: 'from-pink-500 to-rose-600' },
-      { niche: 'Sugestão', name: 'Dentista Premium', grad: 'from-cyan-500 to-blue-600', suggest: true },
-      { niche: 'Sugestão', name: 'Pizzaria Delivery', grad: 'from-orange-500 to-red-600', suggest: true },
-      { niche: 'Sugestão', name: 'Advocacia Corporate', grad: 'from-slate-600 to-slate-800', suggest: true },
-    ];
-
-    function renderPortfolio() {
-      const grid = document.getElementById('portfolioGrid');
-      grid.innerHTML = portfolio.map(p => {
-        const inner = p.suggest
-          ? `<div class="h-40 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center">${p.name}<br><span class="text-sm opacity-80">(exemplo sugerido)</span></div>
-             <div class="p-4"><p class="text-slate-400 text-sm">Modelo disponível sob encomenda →</p></div>`
-          : `<a href="${GH}/${p.file}" class="block h-40 bg-gradient-to-br ${p.grad} flex items-center justify-center text-xl font-bold p-4 text-center">${p.name}</a>
-             <div class="p-4"><p class="text-slate-400 text-sm group-hover:text-indigo-400">Ver site →</p></div>`;
-        return `<div class="group bg-slate-900 rounded-2xl overflow-hidden hover:scale-[1.03] transition">${inner}</div>`;
-      }).join('');
-    }
-
-    async function loadCRM() {
-      try {
-        const r = await fetch(API + '/api/leads/ranked');
-        const d = await r.json();
-        document.getElementById('statLeads').textContent = d.count || 0;
-        const body = document.getElementById('crmBody');
-        if (!d.leads || !d.leads.length) {
-          document.getElementById('crmStatus').textContent = 'Nenhum lead ainda. Use o formulário abaixo para capturar o primeiro!';
-          return;
-        }
-        const tierClass = { A: 'tierA', B: 'tierB', C: 'tierC' };
-        const tierColor = { A: 'text-red-400', B: 'text-amber-400', C: 'text-gray-400' };
-        body.innerHTML = d.leads.map(l => `
-          <tr class="${tierClass[l.tier] || ''} border-b border-slate-800">
-            <td class="p-2">${l.id}</td>
-            <td class="p-2 font-semibold">${l.name || ''}</td>
-            <td class="p-2">
-              ${l.phone ? `<a href="https://wa.me/13064035051?text=Ol%C3%A1%20${encodeURIComponent(l.name||'')}" class="text-green-400 hover:underline">${l.phone}</a>` : '<span class="text-slate-600">—</span>'}
-              ${l.email ? `<br><span class="text-xs text-slate-500">${l.email}</span>` : ''}
-            </td>
-            <td class="p-2 font-bold">${l.score || 0}</td>
-            <td class="p-2 ${tierColor[l.tier] || ''}">${l.tierLabel || l.tier || ''}</td>
-            <td class="p-2">
-              <span class="px-2 py-1 rounded-full text-xs bg-slate-800">${l.status || 'novo'}</span>
-            </td>
-            <td class="p-2">
-              <select onchange="updateStatus(${l.id}, this.value)" class="bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs">
-                <option value="novo">Novo</option>
-                <option value="contatado">Contatado</option>
-                <option value="proposta">Proposta</option>
-                <option value="convertido">Convertido</option>
-                <option value="perdido">Perdido</option>
-              </select>
-            </td>
-          </tr>`).join('');
-        document.getElementById('crmStatus').textContent = `${d.count} leads • ${d.leads.filter(l=>l.tier==='A').length} quentes (Tier A)`;
-      } catch (e) {
-        document.getElementById('crmStatus').textContent = 'CRM local indisponível (abra no computador com o backend rodando).';
-      }
-    }
-
-    async function updateStatus(id, status) {
-      try {
-        await fetch(API + '/api/lead/' + id + '/status', {
-          method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ status })
-        });
-        loadCRM();
-      } catch (e) { alert('Erro ao atualizar status (backend local necessário)'); }
-    }
-
-    // Formulário
-    document.getElementById('leadForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(this).entries());
-      try {
-        await fetch(API + '/api/lead', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
-      } catch (err) {}
-      const resumo = `Olá! Quero um site profissional.%0A%0ANegócio: ${data.businessName||''}%0ANicho: ${data.niche||''}%0ATelefone: ${data.phone||''}%0AEmail: ${data.email||''}`;
-      window.open('https://wa.me/13064035051?text=' + resumo, '_blank');
-      document.getElementById('status').classList.remove('hidden');
-      this.reset();
-      loadCRM();
-    });
-
-    renderPortfolio();
-    loadCRM();
-  </script>
+  async function loadCRM(){
+    try{
+      const r=await fetch(API+'/api/leads/ranked');
+      const d=await r.json();
+      document.getElementById('statLeads').textContent=d.count||0;
+      const body=document.getElementById('crmBody');
+      if(!d.leads||!d.leads.length){document.getElementById('crmStatus').textContent='Nenhum lead ainda. Use o formulário para capturar o primeiro!';return;}
+      const tc={A:'tierA',B:'tierB',C:'tierC'};
+      const col={A:'#ef4444',B:'#f59e0b',C:'#9ca3af'};
+      body.innerHTML=d.leads.map(l=>`
+        <tr class="${tc[l.tier]||''}">
+          <td>${l.id}</td>
+          <td style="font-weight:600">${l.name||''}</td>
+          <td>${l.phone?`<a href="https://wa.me/13064035051?text=Ol%C3%A1%20${encodeURIComponent(l.name||'')}" style="color:#4ade80">${l.phone}</a>`:'<span style="color:#555">—</span>'}${l.email?`<br><span style="font-size:.7rem;color:#888">${l.email}</span>`:''}</td>
+          <td style="font-weight:700">${l.score||0}</td>
+          <td style="color:${col[l.tier]||'#fff'}">${l.tierLabel||l.tier||''}</td>
+          <td><span style="background:rgba(255,255,255,.08);padding:.2rem .6rem;border-radius:999px;font-size:.75rem">${l.status||'novo'}</span></td>
+          <td><select onchange="updateStatus(${l.id},this.value)"><option value="novo">Novo</option><option value="contatado">Contatado</option><option value="proposta">Proposta</option><option value="convertido">Convertido</option><option value="perdido">Perdido</option></select></td>
+        </tr>`).join('');
+      document.getElementById('crmStatus').textContent=`${d.count} leads • ${d.leads.filter(l=>l.tier==='A').length} quentes (Tier A)`;
+    }catch(e){document.getElementById('crmStatus').textContent='CRM local indisponível (abra no computador com o backend rodando).';}
+  }
+  async function updateStatus(id,status){
+    try{await fetch(API+'/api/lead/'+id+'/status',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status})});loadCRM();}catch(e){alert('Erro ao atualizar status (backend local necessário)');}
+  }
+  document.getElementById('leadForm').addEventListener('submit',async function(e){
+    e.preventDefault();
+    const data=Object.fromEntries(new FormData(this).entries());
+    try{await fetch(API+'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(err){}
+    const resumo=`Olá! Quero um site premium.%0A%0ANegócio: ${data.businessName||''}%0ANicho: ${data.niche||''}%0ATelefone: ${data.phone||''}%0AEmail: ${data.email||''}`;
+    window.open('https://wa.me/13064035051?text='+resumo,'_blank');
+    document.getElementById('status').style.display='block';
+    this.reset();loadCRM();
+  });
+  loadCRM();
+</script>
 </body>
 </html>
