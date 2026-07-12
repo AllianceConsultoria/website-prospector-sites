@@ -1,239 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Prospector — Sites de alto padrão</title>
-  <meta name="description" content="Website Prospector: sites profissionais de alto padrão, responsivos e focados em conversão. Qualquer nicho.">
-  <meta property="og:title" content="Website Prospector — Sites de alto padrão">
-  <meta property="og:description" content="Sites profissionais de alto padrão. Qualquer nicho. Pronto em minutos.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://allianceconsultoria.github.io/website-prospector-sites/">
-  <meta property="og:image" content="https://allianceconsultoria.github.io/website-prospector-sites/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root { --gold:#c9a86a; --gold-soft:#e7d3a8; --ink:#0b0b0d; --paper:#f5f1e8; }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter',sans-serif; background:var(--ink); color:var(--paper); overflow-x:hidden; }
-    .serif { font-family:'Cormorant Garamond',serif; }
-    html { scroll-behavior:smooth; }
-
-    /* Fundo nobre: preto + brilho dourado sutil */
-    .aura { position:fixed; inset:0; z-index:0; overflow:hidden; }
-    .aura span { position:absolute; border-radius:50%; filter:blur(110px); opacity:.18; }
-    .g1 { width:42vw; height:42vw; background:#c9a86a; top:-12vw; left:-8vw; animation:dr 20s ease-in-out infinite; }
-    .g2 { width:38vw; height:38vw; background:#8a6d3b; bottom:-14vw; right:-8vw; animation:dr2 24s ease-in-out infinite; }
-    @keyframes dr { 0%,100%{transform:translate(0,0)} 50%{transform:translate(6vw,5vh)} }
-    @keyframes dr2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-5vw,-6vh)} }
-    .grain { position:fixed; inset:0; z-index:1; opacity:.04; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E"); }
-
-    .wrap { position:relative; z-index:2; }
-    .gold { color:var(--gold); }
-    .gold-text { background:linear-gradient(100deg,var(--gold-soft),var(--gold),#9a7b3f); -webkit-background-clip:text; background-clip:text; color:transparent; }
-
-    @keyframes rise { from{opacity:0;transform:translateY(34px)} to{opacity:1;transform:translateY(0)} }
-    .rise { opacity:0; animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards; }
-    .d1{animation-delay:.1s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.7s}
-
-    @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-    .flo { animation:floatY 6s ease-in-out infinite; }
-
-    @keyframes rev { from{opacity:0;transform:translateY(46px)} to{opacity:1;transform:translateY(0)} }
-    .rv { opacity:0; }
-    .rv.in { animation:rev 1s cubic-bezier(.2,.8,.2,1) forwards; }
-
-    .card { background:rgba(245,241,232,.03); border:1px solid rgba(201,168,106,.18); border-radius:18px; transition:.45s; }
-    .card:hover { transform:translateY(-8px); border-color:rgba(201,168,106,.5); box-shadow:0 22px 60px -28px rgba(201,168,106,.4); }
-
-    .btn-gold { background:linear-gradient(100deg,var(--gold-soft),var(--gold)); color:#1a1408; font-weight:600; border-radius:999px; padding:1rem 2.2rem; display:inline-block; transition:.3s; letter-spacing:.02em; }
-    .btn-gold:hover { transform:scale(1.05); box-shadow:0 10px 40px -12px rgba(201,168,106,.6); }
-    .btn-line { border:1px solid var(--gold); color:var(--gold); border-radius:999px; padding:1rem 2.2rem; display:inline-block; transition:.3s; font-weight:500; }
-    .btn-line:hover { background:rgba(201,168,106,.1); }
-
-    .chip { display:inline-block; padding:.4rem 1.1rem; border:1px solid rgba(201,168,106,.3); border-radius:999px; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
-    .divider { height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.4; }
-
-    ::-webkit-scrollbar{width:9px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:8px}
-
-    /* Animações por nicho */
-    @keyframes leafGrow {0%{transform:scale(.55) rotate(-10deg);opacity:.35}50%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.55) rotate(-10deg);opacity:.35}}
-    @keyframes toothShine {0%,100%{opacity:.5}50%{opacity:1;filter:drop-shadow(0 0 12px #67e8f9)}}
-    @keyframes pizzaSpin {0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
-    @keyframes scalesSway {0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
-    @keyframes sparkle {0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.25)}}
-    @keyframes buildUp {0%{transform:translateY(16px);opacity:.25}50%{transform:translateY(0);opacity:1}100%{transform:translateY(16px);opacity:.25}}
-    @keyframes steam {0%{opacity:0;transform:translateY(6px)}50%{opacity:.7}100%{opacity:0;transform:translateY(-8px)}}
-    .ani-leaf{animation:leafGrow 3s ease-in-out infinite;transform-origin:bottom center}
-    .ani-tooth{animation:toothShine 2.4s ease-in-out infinite}
-    .ani-pizza{animation:pizzaSpin 10s linear infinite;transform-origin:center}
-    .ani-scales{animation:scalesSway 3.6s ease-in-out infinite;transform-origin:top center}
-    .ani-spark{animation:sparkle 1.8s ease-in-out infinite}
-    .ani-build{animation:buildUp 3s ease-in-out infinite}
-    .ani-steam{animation:steam 2.6s ease-in-out infinite}
-
-    .niche-badge{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(4px)}
-    .card .thumb{position:relative;overflow:hidden}
-    .card .thumb svg{width:64px;height:64px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Prospector — Sites de Alto Padrão que Vendem por Você | Concierge Digital</title>
+<meta name="description" content="Criamos sites premium, responsivos e ultra-rápidos que atraem clientes e convertem leads pelo WhatsApp. Concierge digital para negócios que querem dominar o Google. Peça pelo WhatsApp.">
+<meta name="keywords" content="criação de sites, sites premium, sites que vendem, design de luxo, gerador de leads, tráfego orgânico, SEO local, consultoria digital, sites responsivos, WhatsApp business, landing page, site para negócio local">
+<meta name="author" content="Website Prospector">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="geo.region" content="BR">
+<meta name="language" content="pt-BR">
+<link rel="canonical" href="https://allianceconsultoria.is-a.dev/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Website Prospector">
+<meta property="og:title" content="Website Prospector — Sites de Alto Padrão que Vendem por Você">
+<meta property="og:description" content="Sites premium, responsivos e rápidos que atraem clientes e convertem leads pelo WhatsApp.">
+<meta property="og:url" content="https://allianceconsultoria.is-a.dev/">
+<meta property="og:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website Prospector — Sites de Alto Padrão">
+<meta name="twitter:description" content="Sites premium que atraem clientes e vendem por você.">
+<meta name="twitter:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+<link rel="preconnect" href="https://wa.me">
+<style>
+:root{--gold:#c9a86a;--gold-soft:#e7d3a8;--ink:#0b0b0d;--paper:#f5f1e8;--muted:#a59f90}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.95rem 2rem;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 30px rgba(201,168,106,.25)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(201,168,106,.4)}
+.btn.ghost{background:transparent;color:var(--gold);border:1px solid rgba(201,168,106,.5)}
+.cta-float{position:fixed;bottom:20px;right:20px;z-index:60;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+/* fundo nobre */
+.aura{position:fixed;inset:0;z-index:0;overflow:hidden}
+.aura span{position:absolute;border-radius:50%;filter:blur(110px);opacity:.16}
+.g1{width:42vw;height:42vw;background:#c9a86a;top:-12vw;left:-8vw;animation:dr 20s ease-in-out infinite}
+.g2{width:38vw;height:38vw;background:#8a6d3b;bottom:-14vw;right:-8vw;animation:dr2 24s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,5vh)}}
+@keyframes dr2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,-6vh)}}
+.grain{position:fixed;inset:0;z-index:1;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:fixed;top:0;width:100%;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,13,.6);border-bottom:1px solid rgba(255,255,255,.07)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:.4rem 1rem;border-radius:999px;border:1px solid rgba(201,168,106,.45);color:var(--gold);margin-bottom:1.3rem}
+section{position:relative;z-index:5;padding:6rem 0}
+h2{font-family:Georgia,serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:700;text-align:center;margin-bottom:1rem}
+.sub{text-align:center;color:var(--muted);margin-bottom:3rem;max-width:42rem;margin-left:auto;margin-right:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
+.card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;transition:transform .3s,border-color .3s;position:relative}
+.card:hover{transform:translateY(-8px);border-color:var(--gold)}
+.card .thumb{height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;text-align:center;color:#fff;padding:.8rem}
+.card .nam{font-family:Georgia,serif;font-size:1.25rem;font-weight:600}
+.nb{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px)}
+.card .foot{padding:1rem 1.2rem;font-size:.85rem;color:var(--muted)}
+.card .foot:hover{color:var(--gold)}
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;counter-reset:p}
+.pc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.8rem}
+.pc .n{font-family:Georgia,serif;font-size:2.4rem;color:var(--gold);opacity:.5}
+.pc h3{font-family:Georgia,serif;font-size:1.3rem;margin:.4rem 0 .5rem}
+.pc p{color:var(--muted);font-size:.92rem}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:3rem;text-align:center}
+.stat .num{font-family:Georgia,serif;font-size:3rem;background:linear-gradient(135deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{color:var(--muted);font-size:.85rem;letter-spacing:.05em}
+form{max-width:520px;margin:0 auto;display:grid;gap:1rem}
+input,textarea,select{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.9rem 1rem;color:var(--paper);font-size:1rem;font-family:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:2.5rem 0;text-align:center;color:var(--muted);font-size:.85rem;position:relative;z-index:5}
+footer a{color:var(--gold)}
+/* animacoes por nicho */
+@keyframes leafGrow{0%{transform:scale(.55) rotate(-10deg);opacity:.35}50%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.55) rotate(-10deg);opacity:.35}}
+@keyframes toothShine{0%,100%{opacity:.5}50%{opacity:1;filter:drop-shadow(0 0 12px #67e8f9)}}
+@keyframes pizzaSpin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes scalesSway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes sparkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes buildUp{0%{transform:translateY(16px);opacity:.25}50%{transform:translateY(0);opacity:1}100%{transform:translateY(16px);opacity:.25}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px)}50%{opacity:.7}100%{opacity:0;transform:translateY(-8px)}}
+.ani-leaf{animation:leafGrow 3s ease-in-out infinite;transform-origin:bottom center}
+.ani-tooth{animation:toothShine 2.4s ease-in-out infinite}
+.ani-pizza{animation:pizzaSpin 10s linear infinite;transform-origin:center}
+.ani-scales{animation:scalesSway 3.6s ease-in-out infinite;transform-origin:top center}
+.ani-spark{animation:sparkle 1.8s ease-in-out infinite}
+.ani-build{animation:buildUp 3s ease-in-out infinite}
+.ani-steam{animation:steam 2.6s ease-in-out infinite}
+.metric{font-size:3rem;font-family:Georgia,serif;color:var(--gold)}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:600px){.cta-float{font-size:.82rem;padding:.7rem 1rem}.metric{font-size:2.2rem}}
+</style>
 </head>
 <body>
+<div class="aura"><span class="g1"></span><span class="g2"></span></div>
+<div class="grain"></div>
 
-  <div class="aura"><span class="g1"></span><span class="g2"></span></div>
-  <div class="grain"></div>
+<nav><div class="wrap">
+  <span class="logo">Website Prospector</span>
+  <a href="#contato" style="color:var(--muted);font-size:.9rem">Fale conosco →</a>
+</div></nav>
 
-  <div class="wrap">
-
-    <!-- NAV -->
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="nav">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="serif text-xl font-semibold tracking-wide">Website&nbsp;Prospector</div>
-        <div class="flex items-center gap-5">
-          <a href="#work" class="hidden sm:block text-sm text-paper/70 hover:text-gold transition">Trabalhos</a>
-          <a href="#process" class="hidden sm:block text-sm text-paper/70 hover:text-gold transition">Processo</a>
-          <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20um%20site%20de%20alto%20padr%C3%A3o%20para%20o%20meu%20neg%C3%B3cio." target="_blank" class="btn-gold text-sm px-5 py-2.5">💬 WhatsApp</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24">
-      <div class="chip rise d1 mb-8 flo">Concierge Digital · Sites de Alto Padrão</div>
-      <h1 class="serif text-5xl md:text-7xl font-bold leading-[1.05] rise d2 max-w-4xl">
-        Sites que <span class="gold-text">elevam</span> seu<br>negócio ao próximo nível.
-      </h1>
-      <p class="rise d3 mt-7 text-lg text-paper/70 max-w-xl font-light">
-        Criamos presenças digitais sofisticadas e convertíveis para qualquer nicho.
-        Elegância e resultado, prontos em minutos.
-      </p>
-      <div class="rise d4 mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="#form" class="btn-gold text-lg">Solicitar meu site</a>
-        <a href="#work" class="btn-line text-lg">Ver portfólio →</a>
-      </div>
-      <div class="divider w-40 my-14"></div>
-      <div class="rise d4 flex gap-12 text-center">
-        <div><div class="serif text-4xl font-semibold gold-text" data-c="14">0</div><div class="text-xs text-paper/50 tracking-wide mt-1">LEADS QUALIFICADOS</div></div>
-        <div><div class="serif text-4xl font-semibold gold-text" data-c="6">0</div><div class="text-xs text-paper/50 tracking-wide mt-1">SITES PUBLICADOS</div></div>
-        <div><div class="serif text-4xl font-semibold gold-text" data-c="100">0</div><div class="text-xs text-paper/50 tracking-wide mt-1">RESPONSIVO</div></div>
-      </div>
-    </section>
-
-    <!-- TRABALHOS -->
-    <section id="work" class="max-w-6xl mx-auto px-6 py-28">
-      <h2 class="serif text-4xl md:text-5xl font-semibold text-center mb-3 rv">Exemplos por nicho</h2>
-      <p class="text-center text-paper/50 mb-12 rv">Cada segmento tem uma linguagem própria — e uma animação feita para o seu cliente se identificar.</p>
-      <div id="grid" class="grid md:grid-cols-3 gap-7"></div>
-    </section>
-
-    <!-- PROCESSO -->
-    <section id="process" class="max-w-5xl mx-auto px-6 py-28">
-      <h2 class="serif text-4xl md:text-5xl font-semibold text-center mb-14 rv">O processo</h2>
-      <div class="grid md:grid-cols-3 gap-7">
-        <div class="card p-9 rv"><div class="serif text-3xl gold mb-4">I</div><h3 class="serif text-xl font-semibold mb-2">Curadoria</h3><p class="text-paper/55 text-sm font-light">Identificamos negócios reais no seu nicho com presença digital aquém do potencial.</p></div>
-        <div class="card p-9 rv delay1"><div class="serif text-3xl gold mb-4">II</div><h3 class="serif text-xl font-semibold mb-2">Criação</h3><p class="text-paper/55 text-sm font-light">Desenvolvemos um site refinado, responsivo e desenhado para converter.</p></div>
-        <div class="card p-9 rv delay2"><div class="serif text-3xl gold mb-4">III</div><h3 class="serif text-xl font-semibold mb-2">Lançamento</h3><p class="text-paper/55 text-sm font-light">Seu site entra no ar em minutos, com canal direto de WhatsApp para vender.</p></div>
-      </div>
-    </section>
-
-    <!-- DEPOIMENTO -->
-    <section class="max-w-3xl mx-auto px-6 py-28">
-      <div class="card p-12 text-center rv">
-        <div class="text-gold text-2xl mb-5">★★★★★</div>
-        <p class="serif text-2xl italic mb-5">"Em 48 horas, meu telefone não parou. O site traduziu exatamente a excelência do meu trabalho."</p>
-        <p class="text-paper/40 text-sm tracking-wide">— CLIENTE · NUTRIÇÃO</p>
-      </div>
-    </section>
-
-    <!-- FORMULÁRIO -->
-    <section id="form" class="max-w-2xl mx-auto px-6 py-28">
-      <div class="card p-9 md:p-11 rv">
-        <h2 class="serif text-3xl md:text-4xl font-semibold mb-2 text-center">Solicite seu site</h2>
-        <p class="text-paper/50 text-center mb-8 text-sm font-light">Preencher abaixo. Retornamos pelo WhatsApp em minutos.</p>
-        <form id="leadForm" class="space-y-4">
-          <input name="businessName" required placeholder="Nome do seu negócio *" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold">
-          <input name="name" placeholder="Seu nome" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold">
-          <input name="phone" placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold">
-          <input name="email" type="email" placeholder="E-mail" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold">
-          <input name="niche" placeholder="Nicho (ex: dentista, pizzaria)" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold">
-          <textarea name="message" placeholder="Conte um pouco sobre o que precisa" rows="3" class="w-full px-4 py-3.5 rounded-xl bg-black/40 border border-gold/20 text-paper placeholder-paper/30 focus:outline-none focus:border-gold"></textarea>
-          <button type="submit" class="w-full btn-gold py-4 text-lg">💬 Enviar e falar no WhatsApp</button>
-          <p id="status" class="text-center text-sm gold hidden">Enviado! Abrindo WhatsApp...</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="text-center py-28 px-6">
-      <h2 class="serif text-4xl md:text-6xl font-semibold mb-7 rv">Pronto para <span class="gold-text">elevar</span> seu negócio?</h2>
-      <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20de%20alto%20padr%C3%A3o%20que%20vende%20para%20o%20meu%20neg%C3%B3cio." target="_blank" class="btn-gold text-xl">💬 Falar no WhatsApp</a>
-    </section>
-
-    <section class="text-center py-10">
-      <a href="crm.html" class="text-gold hover:text-gold-soft text-sm font-semibold tracking-wide">→ ACESSAR CRM DE LEADS</a>
-    </section>
-
-    <footer class="border-t border-gold/10 text-center py-8 text-paper/30 text-sm">
-      <p class="serif">© 2024 Website Prospector — Presenças digitais de alto padrão.</p>
-    </footer>
+<header class="wrap" style="min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:5;padding-top:6rem">
+  <span class="chip">Concierge Digital · Sites de Alto Padrão</span>
+  <h1 class="serif" style="font-size:clamp(2.6rem,7vw,5rem);font-weight:700;line-height:1.04;max-width:14ch">Sites que vendem por você, enquanto você dorme.</h1>
+  <p style="color:var(--muted);font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:38rem;margin:1.5rem 0 2.2rem">Criamos vitrines premium, ultra-rápidas e otimizadas para o Google — prontas em minutos, com botão de WhatsApp e captura de leads automática.</p>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap">
+    <a href="#contato" class="btn">Quero meu site premium</a>
+    <a href="#work" class="btn ghost">Ver exemplos por nicho</a>
   </div>
+  <div class="stats" style="margin-top:3.5rem">
+    <div class="stat"><div class="num" data-c="98">0</div><div class="lbl">% de velocidade</div></div>
+    <div class="stat"><div class="num" data-c="10">0</div><div class="lbl">nichos prontos</div></div>
+    <div class="stat"><div class="num" data-c="24">0</div><div class="lbl">h para entregar</div></div>
+    <div class="stat"><div class="num" data-c="100">0</div><div class="lbl">% foco em conversão</div></div>
+  </div>
+</header>
 
-  <script>
-    const API='http://localhost:3000', GH='https://allianceconsultoria.github.io/website-prospector-sites';
+<section id="work">
+  <div class="wrap">
+    <h2 class="rv">Exemplos por nicho</h2>
+    <p class="sub rv">Cada segmento tem uma linguagem própria — e uma animação feita para o seu cliente se identificar.</p>
+    <div id="grid" class="grid"></div>
+  </div>
+</section>
 
-    /* Ícones animados por nicho */
-    const ICON={
-      saude:`<svg class="ani-leaf" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 21c-5-2-8-6-8-11 4 0 8 2 8 6 0-4 4-6 8-6 0 5-3 9-8 11z"/></svg>`,
-      saude2:`<svg class="ani-tooth" viewBox="0 0 24 24" fill="#fff"><path d="M12 3c-2 0-3 1-5 1S4 5 4 8c0 3 1 4 2 7s1 4 2 4 1-2 2-2 1 2 2 2 1-2 2-4 2-4 2-7c0-3-1-4-3-4s-3-1-5-1z"/></svg>`,
-      comida:`<svg class="ani-pizza" viewBox="0 0 24 24" fill="#fff"><path d="M12 2L3 20a1 1 0 001.5 1L12 16l7.5 5A1 1 0 0021 20L12 2z"/><circle cx="12" cy="11" r="1.4" fill="#0b0b0d"/><circle cx="9" cy="14" r="1" fill="#0b0b0d"/><circle cx="15" cy="14" r="1" fill="#0b0b0d"/></svg>`,
-      juridico:`<svg class="ani-scales" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 3v18M6 7h12M6 7l-3 6h6zM18 7l-3 6h6z"/><circle cx="12" cy="3" r="1.3" fill="#fff"/></svg>`,
-      beleza:`<svg class="ani-spark" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>`,
-      imob:`<svg class="ani-build" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6"/></svg>`,
-      cafe:`<svg class="ani-steam" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M4 9h13v5a4 4 0 01-4 4H8a4 4 0 01-4-4zM17 10h2a2 2 0 010 4h-2M7 4c0 1-1 1-1 2M11 4c0 1-1 1-1 2"/></svg>`,
-    };
+<section id="process">
+  <div class="wrap">
+    <h2 class="rv">Como funciona</h2>
+    <p class="sub rv">Do briefing à vitrine no ar, em 3 passos simples.</p>
+    <div class="process">
+      <div class="pc rv"><div class="n">I</div><h3>Você escolhe o nicho</h3><p>Selecionamos a identidade, as cores e os textos certos para o seu tipo de negócio.</p></div>
+      <div class="pc rv"><div class="n">II</div><h3>Criamos em tempo recorde</h3><p>Site responsivo, leve e com SEO agressivo — pronto para dominar as buscas.</p></div>
+      <div class="pc rv"><div class="n">III</div><h3>Leads chegam no WhatsApp</h3><p>Cada visitante vira uma conversa. Você fecha mais negócios, automaticamente.</p></div>
+    </div>
+  </div>
+</section>
 
-    const portfolio=[
-      {n:'Nutricionista Suelem',b:'Saúde & Bem-estar',f:'lead-2003.html',g:'from-emerald-700 to-teal-900',ic:'saude'},
-      {n:'Clínica Grimaldi',b:'Estética & Beleza',f:'lead-4001.html',g:'from-rose-800 to-pink-950',ic:'beleza'},
-      {n:'Nutri Saúde',b:'Saúde & Bem-estar',f:'lead-2002.html',g:'from-amber-700 to-yellow-900',ic:'saude'},
-      {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',g:'from-cyan-800 to-blue-950',ic:'saude2'},
-      {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',g:'from-orange-800 to-red-950',ic:'comida'},
-      {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',g:'from-slate-700 to-zinc-900',ic:'juridico'},
-      {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',g:'from-indigo-800 to-purple-950',ic:'imob'},
-      {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',g:'from-amber-900 to-stone-950',ic:'cafe'},
-      {n:'Salão Encanto',b:'Beleza & Cabelo',f:'lead-5006.html',g:'from-fuchsia-800 to-rose-950',ic:'beleza'},
-    ];
-    document.getElementById('grid').innerHTML=portfolio.map(p=>{
-      const inner=p.s
-        ? `<div class="thumb h-44 bg-gradient-to-br ${p.g} flex flex-col items-center justify-center gap-3 text-center text-paper/95">
-             ${ICON[p.ic]}
-             <div class="serif text-xl font-semibold px-4">${p.n}</div>
-             <span class="niche-badge">${p.b}</span>
-           </div><div class="p-5"><p class="text-paper/50 text-sm">Disponível sob medida →</p></div>`
-        : `<a href="${GH}/${p.f}" class="thumb block h-44 bg-gradient-to-br ${p.g} flex flex-col items-center justify-center gap-3 text-center text-paper/95 group-hover:scale-105 transition">
-             ${ICON[p.ic]}
-             <div class="serif text-xl font-semibold px-4">${p.n}</div>
-             <span class="niche-badge">${p.b}</span>
-           </a><div class="p-5"><p class="text-paper/50 text-sm group-hover:text-gold">Ver site →</p></div>`;
-      return `<div class="group card overflow-hidden hover:-translate-y-2 transition duration-300">${inner}</div>`;
-    }).join('');
+<section id="prova">
+  <div class="wrap" style="text-align:center">
+    <h2 class="rv">Resultado real</h2>
+    <div class="card rv" style="max-width:640px;margin:0 auto;padding:2.5rem">
+      <p class="serif" style="font-size:1.4rem;line-height:1.5">“Em 2 semanas meu telefone não parou. Os clientes chegavam pelo site dizendo que parecia de empresa grande. Foi o melhor investimento.”</p>
+      <p style="color:var(--gold);margin-top:1rem;font-weight:600">— Helena M., Clínica de Estética</p>
+    </div>
+  </div>
+</section>
 
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
-    document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+<section id="contato">
+  <div class="wrap">
+    <h2 class="rv">Peça seu site agora</h2>
+    <p class="sub rv">Responda em 30 segundos. Entramos em contato pelo WhatsApp.</p>
+    <form class="rv" id="leadForm" onsubmit="return send(event)">
+      <input name="nome" placeholder="Seu nome" required>
+      <input name="whats" placeholder="WhatsApp (com DDD)" required>
+      <select name="nicho" required>
+        <option value="">Qual seu nicho?</option>
+        <option>Odontologia</option><option>Gastronomia</option><option>Jurídico</option>
+        <option>Imobiliário</option><option>Café & Doces</option><option>Beleza & Cabelo</option>
+        <option>Saúde & Nutrição</option><option>Estética</option><option>Personal Trainer</option>
+        <option>Pet Shop</option><option>Outro</option>
+      </select>
+      <textarea name="msg" placeholder="Conte um pouco do seu negócio" rows="3"></textarea>
+      <button class="btn" type="submit">Enviar pelo WhatsApp →</button>
+      <p id="ok" style="color:var(--gold);text-align:center;display:none">Recebido! Abrindo seu WhatsApp…</p>
+    </form>
+  </div>
+</section>
 
-    function anim(el){const t=+el.dataset.c;let c=0;const s=Math.max(1,Math.floor(t/40));const i=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(i);}el.textContent=c;},25);}
-    const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);cio.unobserve(e.target);}}),{threshold:.5});
-    document.querySelectorAll('[data-c]').forEach(el=>cio.observe(el));
+<footer><div class="wrap">
+  © <span id="y"></span> Website Prospector · Concierge Digital de Sites<br>
+  Feito para negócios que querem dominar o Google · <a href="https://wa.me/13064035051">WhatsApp</a>
+</div></footer>
 
-    window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(window.scrollY>40)n.classList.add('bg-black/85','backdrop-blur','border-b','border-gold/10');else n.classList.remove('bg-black/85','backdrop-blur','border-b','border-gold/10');});
+<a href="https://wa.me/13064035051?text=Olá! Quero um site premium para meu negócio." class="cta-float">💬 WhatsApp</a>
 
-    document.getElementById('leadForm').addEventListener('submit',async e=>{
-      e.preventDefault();const d=Object.fromEntries(new FormData(e.target).entries());
-      try{await fetch(API+'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});}catch(_){}
-      const r=`Olá! Quero um site de alto padrão.%0A%0ANegócio: ${d.businessName||''}%0ANicho: ${d.niche||''}%0ATelefone: ${d.phone||''}%0AEmail: ${d.email||''}`;
-      window.open('https://wa.me/13064035051?text='+r,'_blank');
-      document.getElementById('status').classList.remove('hidden');e.target.reset();
-    });
-  </script>
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+  const GH='https://allianceconsultoria.is-a.dev';
+  const ICON={saude:`<svg class="ani-leaf" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 21c-5-2-8-6-8-11 4 0 8 2 8 6 0-4 4-6 8-6 0 5-3 9-8 11z"/></svg>`,
+    saude2:`<svg class="ani-tooth" width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M12 3c-2 0-3 1-5 1S4 5 4 8c0 3 1 4 2 7s1 4 2 4 1-2 2-2 1 2 2 2 1-2 2-4 2-4 2-7c0-3-1-4-3-4s-3-1-5-1z"/></svg>`,
+    comida:`<svg class="ani-pizza" width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M12 2L3 20a1 1 0 001.5 1L12 16l7.5 5A1 1 0 0021 20L12 2z"/><circle cx="12" cy="11" r="1.4" fill="#0b0b0d"/><circle cx="9" cy="14" r="1" fill="#0b0b0d"/><circle cx="15" cy="14" r="1" fill="#0b0b0d"/></svg>`,
+    juridico:`<svg class="ani-scales" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 3v18M6 7h12M6 7l-3 6h6zM18 7l-3 6h6z"/><circle cx="12" cy="3" r="1.3" fill="#fff"/></svg>`,
+    beleza:`<svg class="ani-spark" width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>`,
+    imob:`<svg class="ani-build" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6"/></svg>`,
+    cafe:`<svg class="ani-steam" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M4 9h13v5a4 4 0 01-4 4H8a4 4 0 01-4-4zM17 10h2a2 2 0 010 4h-2M7 4c0 1-1 1-1 2M11 4c0 1-1 1-1 2"/></svg>`};
+  const portfolio=[
+    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',g:'linear-gradient(135deg,#0e7490,#082f49)',ic:'saude2'},
+    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',g:'linear-gradient(135deg,#c2410c,#7f1d1d)',ic:'comida'},
+    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',g:'linear-gradient(135deg,#334155,#0f172a)',ic:'juridico'},
+    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',g:'linear-gradient(135deg,#5b21b6,#2e1065)',ic:'imob'},
+    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',g:'linear-gradient(135deg,#78350f,#1c1917)',ic:'cafe'},
+    {n:'Salão Encanto',b:'Beleza & Cabelo',f:'lead-5006.html',g:'linear-gradient(135deg,#be185d,#831843)',ic:'beleza'},
+    {n:'Nutri Vida',b:'Saúde & Nutrição',f:'lead-5007.html',g:'linear-gradient(135deg,#15803d,#064e3b)',ic:'saude'},
+    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',g:'linear-gradient(135deg,#db2777,#831843)',ic:'beleza'},
+    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',g:'linear-gradient(135deg,#b45309,#78350f)',ic:'saude'},
+    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',g:'linear-gradient(135deg,#0d9488,#134e4a)',ic:'saude'}
+  ];
+  document.getElementById('grid').innerHTML=portfolio.map(p=>`
+    <div class="card">
+      <a href="${GH}/${p.f}" class="thumb block" style="background:${p.g}">
+        ${ICON[p.ic]}
+        <div class="nam">${p.n}</div>
+        <span class="nb">${p.b}</span>
+      </a>
+      <div class="foot"><a href="${GH}/${p.f}">Ver site →</a></div>
+    </div>`).join('');
+
+  // contadores + reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.dataset.c){let el=e.target,n=+el.dataset.c,t=0,step=n/40;let iv=setInterval(()=>{t+=step;if(t>=n){t=n;clearInterval(iv)}el.textContent=Math.floor(t)},25)}}}),{threshold:.2});
+  document.querySelectorAll('.rv,.num').forEach(el=>io.observe(el));
+
+  function send(e){e.preventDefault();const f=e.target;const msg=`Olá! Sou ${f.nome.value}, do nicho ${f.nicho.value}. WhatsApp: ${f.whats.value}. ${f.msg.value}`;window.open('https://wa.me/13064035051?text='+encodeURIComponent(msg),'_blank');document.getElementById('ok').style.display='block';return false}
+</script>
 </body>
 </html>
