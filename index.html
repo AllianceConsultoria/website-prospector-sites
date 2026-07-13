@@ -55,7 +55,7 @@ h2{font-family:Georgia,serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:700;te
 .sub{text-align:center;color:var(--muted);margin-bottom:3rem;max-width:42rem;margin-left:auto;margin-right:auto}
 /* hero com imagem */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover;transform:scale(1.05)}
+.hero::before{content:'';position:absolute;inset:0;background:url('img/hero-main.jpg') center/cover;transform:scale(1.05)}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,#0b0b0df2,#0b0b0dcc 55%,#0b0b0d99)}
 .hero .wrap{position:relative;z-index:2;padding-top:7rem}
 .hero h1{font-family:Georgia,serif;font-size:clamp(2.6rem,7vw,5.2rem);font-weight:700;line-height:1.04;max-width:15ch;text-shadow:0 4px 40px rgba(0,0,0,.6)}
@@ -182,6 +182,57 @@ footer a{color:var(--gold)}
   </div>
 </section>
 
+<section id="planos">
+  <div class="wrap">
+    <h2 class="rv">Planos de Concierge</h2>
+    <p class="sub rv">Escolha o nível de presença que o seu negócio merece. Todos com site premium, WhatsApp e SEO.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr))">
+      <div class="card glass rv" style="padding:2rem;text-align:center">
+        <div class="badge" style="margin-bottom:1rem">Essencial</div>
+        <div class="serif" style="font-size:2.4rem;font-weight:700;color:var(--gold)">R$ 297</div>
+        <div style="color:var(--muted);font-size:.85rem;margin-bottom:1.2rem">à vista ou 12x</div>
+        <ul style="list-style:none;text-align:left;display:grid;gap:.6rem;margin-bottom:1.5rem;color:#f5f0e6cc;font-size:.92rem">
+          <li>✦ Site premium 1 página</li>
+          <li>✦ Botão WhatsApp fixo</li>
+          <li>✦ SEO local básico</li>
+          <li>✦ Entrega em 48h</li>
+          <li>✦ 1 nicho à escolha</li>
+        </ul>
+        <a href="https://wa.me/13064035051?text=Olá!%20Quero%20o%20plano%20Essencial%20(R$297)." class="btn" style="width:100%">Começar</a>
+      </div>
+      <div class="card glass rv" style="padding:2rem;text-align:center;border-color:var(--gold);box-shadow:0 20px 60px rgba(201,168,106,.18)">
+        <div class="badge" style="margin-bottom:1rem;background:var(--gold);color:#0b0b0d">Premium ⭐</div>
+        <div class="serif" style="font-size:2.4rem;font-weight:700;color:var(--gold)">R$ 597</div>
+        <div style="color:var(--muted);font-size:.85rem;margin-bottom:1.2rem">à vista ou 12x</div>
+        <ul style="list-style:none;text-align:left;display:grid;gap:.6rem;margin-bottom:1.5rem;color:#f5f0e6cc;font-size:.92rem">
+          <li>✦ Site premium até 5 páginas</li>
+          <li>✦ Botão WhatsApp + formulário</li>
+          <li>✦ SEO agressivo + Google</li>
+          <li>✦ Entrega em 24h</li>
+          <li>✦ Captura de leads automática</li>
+          <li>✦ 3 nichos à escolha</li>
+        </ul>
+        <a href="https://wa.me/13064035051?text=Olá!%20Quero%20o%20plano%20Premium%20(R$597)." class="btn" style="width:100%">Quero esse</a>
+      </div>
+      <div class="card glass rv" style="padding:2rem;text-align:center">
+        <div class="badge" style="margin-bottom:1rem">Concierge</div>
+        <div class="serif" style="font-size:2.4rem;font-weight:700;color:var(--gold)">R$ 1.497</div>
+        <div style="color:var(--muted);font-size:.85rem;margin-bottom:1.2rem">à vista ou 12x</div>
+        <ul style="list-style:none;text-align:left;display:grid;gap:.6rem;margin-bottom:1.5rem;color:#f5f0e6cc;font-size:.92rem">
+          <li>✦ Site premium ilimitado</li>
+          <li>✦ CRM de leads incluso</li>
+          <li>✦ SEO + tráfego mensal</li>
+          <li>✦ Suporte prioritário</li>
+          <li>✦ Todos os nichos liberados</li>
+          <li>✦ Reunião de estratégia</li>
+        </ul>
+        <a href="https://wa.me/13064035051?text=Olá!%20Quero%20o%20plano%20Concierge%20(R$1497)." class="btn" style="width:100%">Falar com consultor</a>
+      </div>
+    </div>
+    <p class="sub rv" style="margin-top:2rem">💎 Garantia de 7 dias ou seu dinheiro de volta. Pagamento via Pix, cartão ou boleto.</p>
+  </div>
+</section>
+
 <footer><div class="wrap">
   © <span id="y"></span> Website Prospector · Concierge Digital de Sites<br>
   Email: <a href="mailto:allianceconsultoriaal@gmail.com">allianceconsultoriaal@gmail.com</a><br>
@@ -201,16 +252,16 @@ footer a{color:var(--gold)}
     imob:`<svg class="ani-build" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6"/></svg>`,
     cafe:`<svg class="ani-steam" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M4 9h13v5a4 4 0 01-4 4H8a4 4 0 01-4-4zM17 10h2a2 2 0 010 4h-2M7 4c0 1-1 1-1 2M11 4c0 1-1 1-1 2"/></svg>`};
   const portfolio=[
-    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',img:'https://images.unsplash.com/photo-1606811842703-b5a2f0d8a1f7?auto=format&fit=crop&w=600&q=80',ic:'saude2'},
-    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',ic:'comida'},
-    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',img:'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80',ic:'juridico'},
-    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80',ic:'imob'},
-    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',img:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80',ic:'cafe'},
-    {n:'Salão Encanto',b:'Beleza & Cabelo',f:'lead-5006.html',img:'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80',ic:'beleza'},
-    {n:'Nutri Vida',b:'Saúde & Nutrição',f:'lead-5007.html',img:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80',ic:'saude'},
-    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80',ic:'beleza'},
-    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80',ic:'saude'},
-    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=600&q=80',ic:'saude'}
+    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',img:'img/dentista.jpg',ic:'saude2'},
+    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',img:'img/pizzaria.jpg',ic:'comida'},
+    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',img:'img/advocacia.jpg',ic:'juridico'},
+    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',img:'img/imob.jpg',ic:'imob'},
+    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',img:'img/cafe.jpg',ic:'cafe'},
+    {n:'Salão Encanto',b:'Beleza & Cabelo',f:'lead-5006.html',img:'img/salao.jpg',ic:'beleza'},
+    {n:'Nutri Vida',b:'Saúde & Nutrição',f:'lead-5007.html',img:'img/nutri.jpg',ic:'saude'},
+    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',img:'img/estetica.jpg',ic:'beleza'},
+    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',img:'img/fitness.jpg',ic:'saude'},
+    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'img/pet.jpg',ic:'saude'}
   ];
   document.getElementById('grid').innerHTML=portfolio.map(p=>`
     <div class="card">
