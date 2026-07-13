@@ -25,15 +25,19 @@
 <meta name="twitter:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
 <link rel="preconnect" href="https://wa.me">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#c9a86a;--gold-soft:#e7d3a8;--ink:#0b0b0d;--paper:#f5f1e8;--muted:#a59f90}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 .serif{font-family:Georgia,'Times New Roman',serif}
 .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
 a{color:inherit;text-decoration:none}
 .btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.95rem 2rem;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 30px rgba(201,168,106,.25)}
+
+/* Glassmorphism card */
+.glass{background:rgba(255,255,255,0.08);border-radius:12px;backdrop-filter:blur(12px);box-shadow:0 8px 32px rgba(0,0,0,0.2);}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(201,168,106,.4)}
 .btn.ghost{background:transparent;color:var(--gold);border:1px solid rgba(201,168,106,.5)}
 .cta-float{position:fixed;bottom:20px;right:20px;z-index:60;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
@@ -119,6 +123,11 @@ footer a{color:var(--gold)}
     <div class="stat"><div class="num" data-c="100">0</div><div class="lbl">% foco em conversão</div></div>
   </div>
 </header>
+<section id="hero" class="glass" style="background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover; padding:6rem 0; text-align:center; color:var(--paper);">
+  <h1 class="serif" style="font-size:clamp(2.5rem,8vw,5.5rem); font-weight:700;">Sua presença online de alto padrão</h1>
+  <p style="font-size:1.2rem; margin-top:1rem;">Sites premium que convertem leads direto para seu WhatsApp.</p>
+  <a href="#contato" class="btn">Comece agora</a>
+</section>
 
 <section id="work">
   <div class="wrap">
@@ -173,6 +182,7 @@ footer a{color:var(--gold)}
 
 <footer><div class="wrap">
   © <span id="y"></span> Website Prospector · Concierge Digital de Sites<br>
+Email: <a href="mailto:allianceconsultoriaal@gmail.com">allianceconsultoriaal@gmail.com</a><br>
   Feito para negócios que querem dominar o Google · <a href="https://wa.me/13064035051">WhatsApp</a>
 </div></footer>
 
@@ -202,12 +212,12 @@ footer a{color:var(--gold)}
   ];
   document.getElementById('grid').innerHTML=portfolio.map(p=>`
     <div class="card">
-      <a href="${GH}/${p.f}" class="thumb block" style="background:${p.g}">
+      <a href="${p.f}" class="thumb block" style="background:${p.g}">
         ${ICON[p.ic]}
         <div class="nam">${p.n}</div>
         <span class="nb">${p.b}</span>
       </a>
-      <div class="foot"><a href="${GH}/${p.f}">Ver site →</a></div>
+      <div class="foot"><a href="${p.f}">Ver site →</a></div>
     </div>`).join('');
 
   // contadores + reveal
