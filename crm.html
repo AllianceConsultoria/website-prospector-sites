@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Prospector — CRM de Leads & Portfório Premium</title>
+<title>Website Prospector — CRM de Leads & Portfólio Premium</title>
 <meta name="description" content="CRM de leads qualificados + portfólio de sites premium por nicho. Acompanhe conversões e veja exemplos reais que vendem pelo WhatsApp.">
 <meta name="keywords" content="CRM de leads, portfólio de sites, sites premium, geração de leads, qualificação de leads, sites por nicho, conversão de vendas">
 <meta name="author" content="Website Prospector">
@@ -23,37 +23,43 @@
 <meta name="twitter:image" content="https://allianceconsultoria.is-a.dev/og-image.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
 <link rel="preconnect" href="https://wa.me">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#c9a86a;--gold-soft:#e7d3a8;--ink:#0b0b0d;--paper:#f5f1e8;--muted:#a59f90}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .serif{font-family:Georgia,'Times New Roman',serif}
-.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
 a{color:inherit;text-decoration:none}
 .btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.9rem 1.8rem;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 30px rgba(201,168,106,.25)}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(201,168,106,.4)}
-.cta-float{position:fixed;bottom:20px;right:20px;z-index:60;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
-nav{position:fixed;top:0;width:100%;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,13,.6);border-bottom:1px solid rgba(255,255,255,.07)}
+.cta-float{position:fixed;bottom:22px;right:22px;z-index:60;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0b0b0d;font-weight:700;padding:.9rem 1.35rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:22px}
+nav{position:fixed;top:0;width:100%;z-index:50;backdrop-filter:blur(16px);background:rgba(11,11,13,.55);border-bottom:1px solid rgba(255,255,255,.07)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
 .logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 15%,#8a6d3b,transparent 55%),linear-gradient(135deg,#c9a86a,#7c5e2e)}
-.hero .wrap{position:relative;z-index:5;padding-top:6rem;color:#0b0b0d;text-align:center}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80') center/cover;transform:scale(1.05)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,#0b0b0df2,#0b0b0dcc 60%,#0b0b0d99)}
+.hero .wrap{position:relative;z-index:2;padding-top:7rem;color:#f5f0e6;text-align:center}
 .hero h1{font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;line-height:1.05}
 .hero p{font-size:clamp(1.05rem,2.4vw,1.3rem);margin:1.2rem auto 2rem;max-width:40rem;opacity:.85}
 .hero .btn{background:#0b0b0d;color:var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.3)}
 .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:2.5rem}
 .stats .n{font-family:Georgia,serif;font-size:2.6rem;font-weight:700}
 .stats .l{font-size:.85rem;opacity:.8}
-section{padding:5rem 0}
+section{padding:5rem 0;position:relative;z-index:5}
 h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;text-align:center;margin-bottom:1rem}
 .sub{text-align:center;color:var(--muted);margin-bottom:3rem;max-width:42rem;margin-left:auto;margin-right:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.3rem}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;transition:transform .25s}
-.card:hover{transform:translateY(-6px);border-color:var(--gold)}
-.card .thumb{height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#fff;text-align:center;padding:.8rem}
-.card .nm{font-family:Georgia,serif;font-size:1.15rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.3rem}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.card .thumb{height:150px;background-size:cover;background-position:center;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.card .thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(11,11,13,.5))}
+.card .nm{font-family:Georgia,serif;font-size:1.2rem;font-weight:600;color:#fff;position:relative;z-index:2;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .card .ft{padding:.9rem 1.1rem;font-size:.85rem;color:var(--muted)}
+.card .ft:hover{color:var(--gold)}
 .crmbox{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:1.4rem;overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:.85rem}
 th{text-align:left;padding:.6rem;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.1);font-weight:600}
@@ -83,7 +89,7 @@ footer a{color:var(--gold)}
   </div>
   <div class="stats">
     <div><div class="n" id="statLeads">0</div><div class="l">Leads qualificados</div></div>
-    <div><div class="n" id="statSites">10</div><div class="l">Sites publicados</div></div>
+    <div><div class="n">10</div><div class="l">Sites publicados</div></div>
     <div><div class="n">100%</div><div class="l">Responsivo</div></div>
   </div>
 </div></header>
@@ -121,7 +127,7 @@ footer a{color:var(--gold)}
   </form>
 </div></section>
 
-<section style="text-align:center;background:radial-gradient(circle at 50% 50%,#8a6d3b,transparent 60%),linear-gradient(135deg,#c9a86a,#7c5e2e);color:#0b0b0d;padding:4rem 0">
+<section style="text-align:center;background:linear-gradient(135deg,#c9a86a,#7c5e2e);color:#0b0b0d;padding:4rem 0">
   <div class="wrap">
     <h2 style="color:#0b0b0d">Pronto para seu site premium?</h2>
     <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20um%20site%20premium%20para%20o%20meu%20neg%C3%B3cio." class="btn" style="background:#0b0b0d;color:var(--gold)">💬 Falar no WhatsApp</a>
@@ -140,21 +146,21 @@ footer a{color:var(--gold)}
   const API='http://localhost:3000';
   const GH='https://allianceconsultoria.is-a.dev';
   const portfolio=[
-    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',g:'linear-gradient(135deg,#0e7490,#082f49)'},
-    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',g:'linear-gradient(135deg,#c2410c,#7f1d1d)'},
-    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',g:'linear-gradient(135deg,#334155,#0f172a)'},
-    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',g:'linear-gradient(135deg,#5b21b6,#2e1065)'},
-    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',g:'linear-gradient(135deg,#78350f,#1c1917)'},
-    {n:'Salão Encanto',b:'Beleza',f:'lead-5006.html',g:'linear-gradient(135deg,#be185d,#831843)'},
-    {n:'Nutri Vida',b:'Nutrição',f:'lead-5007.html',g:'linear-gradient(135deg,#15803d,#064e3b)'},
-    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',g:'linear-gradient(135deg,#db2777,#831843)'},
-    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',g:'linear-gradient(135deg,#b45309,#78350f)'},
-    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',g:'linear-gradient(135deg,#0d9488,#134e4a)'}
+    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',img:'https://images.unsplash.com/photo-1606811842703-b5a2f0d8a1f7?auto=format&fit=crop&w=600&q=80'},
+    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80'},
+    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',img:'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80'},
+    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80'},
+    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',img:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80'},
+    {n:'Salão Encanto',b:'Beleza',f:'lead-5006.html',img:'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80'},
+    {n:'Nutri Vida',b:'Nutrição',f:'lead-5007.html',img:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80'},
+    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80'},
+    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80'},
+    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=600&q=80'}
   ];
   document.getElementById('portfolioGrid').innerHTML=portfolio.map(p=>`
     <div class="card">
-      <a href="${GH}/${p.f}" class="thumb block" style="background:${p.g}">
-        <div class="nm">${p.n}</div><span style="font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85">${p.b}</span>
+      <a href="${GH}/${p.f}" class="thumb block" style="background-image:url('${p.img}')">
+        <div class="nm">${p.n}</div>
       </a>
       <div class="ft"><a href="${GH}/${p.f}">Ver site →</a></div>
     </div>`).join('');
