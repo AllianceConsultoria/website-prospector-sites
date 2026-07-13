@@ -40,7 +40,7 @@ nav{position:fixed;top:0;width:100%;z-index:50;backdrop-filter:blur(16px);backgr
 nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
 .logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80') center/cover;transform:scale(1.05)}
+.hero::before{content:'';position:absolute;inset:0;background:url('img/hero-crm.jpg') center/cover;transform:scale(1.05)}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,#0b0b0df2,#0b0b0dcc 60%,#0b0b0d99)}
 .hero .wrap{position:relative;z-index:2;padding-top:7rem;color:#f5f0e6;text-align:center}
 .hero h1{font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;line-height:1.05}
@@ -146,16 +146,16 @@ footer a{color:var(--gold)}
   const API='http://localhost:3000';
   const GH='https://allianceconsultoria.is-a.dev';
   const portfolio=[
-    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',img:'https://images.unsplash.com/photo-1606811842703-b5a2f0d8a1f7?auto=format&fit=crop&w=600&q=80'},
-    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80'},
-    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',img:'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80'},
-    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80'},
-    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',img:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80'},
-    {n:'Salão Encanto',b:'Beleza',f:'lead-5006.html',img:'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80'},
-    {n:'Nutri Vida',b:'Nutrição',f:'lead-5007.html',img:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80'},
-    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80'},
-    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80'},
-    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=600&q=80'}
+    {n:'Dentista Premium',b:'Odontologia',f:'lead-5001.html',img:'img/dentista.jpg'},
+    {n:'Pizzaria Bella',b:'Gastronomia',f:'lead-5002.html',img:'img/pizzaria.jpg'},
+    {n:'Advocacia Corporate',b:'Jurídico',f:'lead-5003.html',img:'img/advocacia.jpg'},
+    {n:'Imobiliária Aurora',b:'Imobiliário',f:'lead-5004.html',img:'img/imob.jpg'},
+    {n:'Café Aconchego',b:'Café & Doces',f:'lead-5005.html',img:'img/cafe.jpg'},
+    {n:'Salão Encanto',b:'Beleza',f:'lead-5006.html',img:'img/salao.jpg'},
+    {n:'Nutri Vida',b:'Nutrição',f:'lead-5007.html',img:'img/nutri.jpg'},
+    {n:'Clínica Lumière',b:'Estética',f:'lead-5008.html',img:'img/estetica.jpg'},
+    {n:'Personal Trainer Max',b:'Fitness',f:'lead-5009.html',img:'img/fitness.jpg'},
+    {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'img/pet.jpg'}
   ];
   document.getElementById('portfolioGrid').innerHTML=portfolio.map(p=>`
     <div class="card">
