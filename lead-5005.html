@@ -46,7 +46,9 @@ a{color:inherit;text-decoration:none}
 .cta-float{position:fixed;bottom:22px;right:22px;z-index:60;background:linear-gradient(135deg,var(--acc),#e7d3a8);color:#0b0b0d;font-weight:700;padding:.9rem 1.4rem;border-radius:999px;box-shadow:0 12px 36px rgba(0,0,0,.5)}
 .badge{display:inline-block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:.4rem 1rem;margin-bottom:1.3rem}
 header.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden}
-header.hero::before{content:'';position:absolute;inset:0;background:url('img/cafe.jpg') center/cover;transform:scale(1.05);filter:saturate(1.1)}
+header.hero::before{content:'';position:absolute;inset:0;background:url('img/cafe.jpg') center/cover;transform:scale(1.05);filter:saturate(1.12) contrast(1.04);animation:heroZoom 18s ease-in-out infinite}
+@keyframes heroZoom{0%,100%{transform:scale(1.05)}50%{transform:scale(1.16)}}
+.hook{display:inline-block;margin:1.4rem 0 .4rem;padding:.7rem 1.2rem;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:clamp(1rem,2.2vw,1.2rem);color:#fff;backdrop-filter:blur(8px)}
 header.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,#78350ff2,#1c1917f0 60%,#0b0b0df0)}
 .glow{position:absolute;width:50vw;height:50vw;border-radius:50%;background:radial-gradient(circle,#d6a86a55,transparent 70%);filter:blur(90px);z-index:0;animation:float 14s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(4vw,3vh)}}
@@ -87,6 +89,7 @@ footer a{color:var(--acc)}
   <span class="badge">O café da sua pausa perfeita</span>
   <h1 class="title">Café Aconchego</h1>
   <p class="lead">Grãos especiais, doces artesanais e um ambiente que abraça.</p>
+  <p class="hook">☕ O aroma do café recém-torrado e aquele doce quentinho — sua pausa perfeita começa aqui.</p>
   <div class="row">
     <a href="https://wa.me/13064035051?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Caf%C3%A9%20Aconchego%20%E2%98%95" class="btn">💬 Fazer pedido</a>
     <a href="#servicos" class="btn ghost">Conhecer serviços</a>
