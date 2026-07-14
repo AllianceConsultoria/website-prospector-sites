@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://allianceconsultoria.is-a.dev/sitemap.xml
+
+# Otimizações de imagem para indexação no Google Imagens
+# (imagens servidas localmente em /img)
+
+Host: allianceconsultoria.is-a.dev
