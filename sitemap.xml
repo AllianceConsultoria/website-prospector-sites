@@ -3,8 +3,8 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/hero-main.jpg</image:loc><image:title>Website Prospector</image:title></image:image></url>
-  <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/crm.html</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>0.9</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/hero-crm.jpg</image:loc><image:title>CRM de Leads</image:title></image:image></url>
+  <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/cidades.html</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/og-image.png</image:loc><image:title>Website Prospector Baependi Cunha</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5001.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/dentista.jpg</image:loc><image:title>Dentista Premium</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5002.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
@@ -12,15 +12,15 @@
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5003.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/advocacia.jpg</image:loc><image:title>Advocacia Corporate</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5004.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/imob.jpg</image:loc><image:title>ImobiliÃ¡ria Aurora</image:title></image:image></url>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/imob.jpg</image:loc><image:title>Imobiliária Aurora</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5005.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/cafe.jpg</image:loc><image:title>CafÃ© Aconchego</image:title></image:image></url>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/cafe.jpg</image:loc><image:title>Café Aconchego</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5006.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/salao.jpg</image:loc><image:title>SalÃ£o Encanto</image:title></image:image></url>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/salao.jpg</image:loc><image:title>Salão Encanto</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5007.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/nutri.jpg</image:loc><image:title>Nutri Vida</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5008.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/estetica.jpg</image:loc><image:title>ClÃ­nica LumiÃ¨re</image:title></image:image></url>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/estetica.jpg</image:loc><image:title>Clínica Lumière</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5009.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/fitness.jpg</image:loc><image:title>Personal Trainer Max</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5010.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
