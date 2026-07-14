@@ -83,6 +83,7 @@ h2{font-family:Georgia,serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:700;te
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:url('img/hero-main.jpg') center/cover;transform:scale(1.05)}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,#0b0b0df2,#0b0b0dcc 55%,#0b0b0d99)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;filter:saturate(1.1) contrast(1.05);z-index:0}
 .hero .wrap{position:relative;z-index:2;padding-top:7rem}
 .hero h1{font-family:Georgia,serif;font-size:clamp(2.6rem,7vw,5.2rem);font-weight:700;line-height:1.04;max-width:15ch;text-shadow:0 4px 40px rgba(0,0,0,.6)}
 .hero p{color:#f5f0e6cc;font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:38rem;margin:1.5rem 0 2.2rem}
@@ -91,6 +92,19 @@ h2{font-family:Georgia,serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:700;te
 .stat .lbl{color:var(--muted);font-size:.85rem;letter-spacing:.05em}
 /* portfólio */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.4rem}
+.pcard{position:relative;border-radius:18px;overflow:hidden;background:#111;border:1px solid rgba(201,168,106,.18);transition:transform .4s,box-shadow .4s}
+.pcard:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(201,168,106,.18)}
+.pcard .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b0b0d}
+.pcard .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pcard:hover .media img{transform:scale(1.08)}
+.pcard .badge2{position:absolute;top:12px;left:12px;background:rgba(11,11,13,.7);backdrop-filter:blur(6px);color:var(--gold);font-size:.72rem;padding:.3rem .7rem;border-radius:20px;border:1px solid rgba(201,168,106,.4);font-weight:600;z-index:3}
+.pcard .body{padding:1.1rem 1.2rem 1.4rem}
+.pcard h3{font-family:Georgia,serif;color:#f5f0e6;font-size:1.15rem;margin-bottom:.3rem}
+.pcard p{color:var(--muted);font-size:.88rem;line-height:1.45}
+.pcard .cta{display:inline-block;margin-top:.9rem;color:var(--gold);font-weight:600;font-size:.9rem}
+.badges{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;margin:2rem 0 0}
+.badge-pill{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:.6rem 1rem;border-radius:30px;font-size:.85rem;color:#f5f0e688}
+.badge-pill b{color:var(--gold)}
 .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
 .card:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 24px 60px rgba(0,0,0,.5)}
 .card .thumb{height:180px;background-size:cover;background-position:center;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
@@ -202,6 +216,17 @@ footer a{color:var(--gold)}
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Início","item":"./"},
+    {"@type":"ListItem","position":2,"name":"Exemplos por nicho","item":"#work"},
+    {"@type":"ListItem","position":3,"name":"Planos","item":"#planos"}
+  ]
+}
+</script>
 </head>
 <body>
 <div class="aura"><span class="g1"></span><span class="g2"></span></div>
@@ -212,6 +237,9 @@ footer a{color:var(--gold)}
 </div></nav>
 
 <header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="img/hero-main.jpg">
+    <source src="video/showcase.mp4" type="video/mp4">
+  </video>
   <div class="wrap">
     <span class="chip">Concierge Digital · Sites de Alto Padrão</span>
     <h1>Sites que vendem por você, enquanto você dorme.</h1>
@@ -232,8 +260,15 @@ footer a{color:var(--gold)}
 <section id="work">
   <div class="wrap">
     <h2 class="rv">Exemplos por nicho</h2>
-    <p class="sub rv">Cada segmento tem uma linguagem própria — e uma animação feita para o seu cliente se identificar.</p>
+    <p class="sub rv">Cada segmento tem uma linguagem própria — e um site feito para o seu cliente se identificar e comprar. Passe o mouse para sentir o movimento.</p>
     <div id="grid" class="grid"></div>
+    <div class="badges rv">
+      <div class="badge-pill">✅ <b>Garantia de 7 dias</b> ou dinheiro de volta</div>
+      <div class="badge-pill">⚡ <b>Entrega em até 24h</b></div>
+      <div class="badge-pill">📱 <b>WhatsApp</b> integrado</div>
+      <div class="badge-pill">🔍 <b>SEO agressivo</b> incluso</div>
+      <div class="badge-pill">🛡️ <b>Sem fidelidade</b></div>
+    </div>
   </div>
 </section>
 
@@ -357,7 +392,7 @@ footer a{color:var(--gold)}
 
 <script>
   document.getElementById('y').textContent=new Date().getFullYear();
-  const GH='https://allianceconsultoria.github.io/website-prospector-sites';
+  const GH='';
   const ICON={saude:`<svg class="ani-leaf" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4"><path d="M12 21c-5-2-8-6-8-11 4 0 8 2 8 6 0-4 4-6 8-6 0 5-3 9-8 11z"/></svg>`,
     saude2:`<svg class="ani-tooth" width="46" height="46" viewBox="0 0 24 24" fill="#fff"><path d="M12 3c-2 0-3 1-5 1S4 5 4 8c0 3 1 4 2 7s1 4 2 4 1-2 2-2 1 2 2 2 1-2 2-4 2-4 2-7c0-3-1-4-3-4s-3-1-5-1z"/></svg>`,
     comida:`<svg class="ani-pizza" width="46" height="46" viewBox="0 0 24 24" fill="#fff"><path d="M12 2L3 20a1 1 0 001.5 1L12 16l7.5 5A1 1 0 0021 20L12 2z"/><circle cx="12" cy="11" r="1.4" fill="#0b0b0d"/><circle cx="9" cy="14" r="1" fill="#0b0b0d"/><circle cx="15" cy="14" r="1" fill="#0b0b0d"/></svg>`,
@@ -378,13 +413,17 @@ footer a{color:var(--gold)}
     {n:'Pet Love',b:'Pet Shop',f:'lead-5010.html',img:'img/pet.jpg',ic:'saude'}
   ];
   document.getElementById('grid').innerHTML=portfolio.map(p=>`
-    <div class="card">
-      <a href="${GH}/${p.f}" class="thumb block" style="background-image:url('${p.img}')">
-        ${ICON[p.ic]}
-        <div class="nam">${p.n}</div>
-        <span class="nb">${p.b}</span>
+    <div class="pcard rv">
+      <a href="${p.f}" class="media block" aria-label="Ver ${p.n}">
+        <img src="${p.img}" alt="${p.n} — site de exemplo" loading="lazy" width="1280" height="800">
+        <span class="badge2">${p.b}</span>
+        <span class="play"><span>▶</span></span>
       </a>
-      <div class="foot"><a href="${GH}/${p.f}">Ver site →</a></div>
+      <div class="body">
+        <h3>${p.n}</h3>
+        <p>Site premium pronto para converter visitas em clientes pelo WhatsApp.</p>
+        <a href="${p.f}" class="cta">Ver exemplo →</a>
+      </div>
     </div>`).join('');
 
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.dataset.c){let el=e.target,n=+el.dataset.c,t=0,step=n/40;let iv=setInterval(()=>{t+=step;if(t>=n){t=n;clearInterval(iv)}el.textContent=Math.floor(t)},25)}}}),{threshold:.2});
