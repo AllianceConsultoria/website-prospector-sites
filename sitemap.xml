@@ -3,8 +3,10 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/hero-main.jpg</image:loc><image:title>Website Prospector</image:title></image:image></url>
-  <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/cidades.html</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>0.9</priority>
-    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/og-image.png</image:loc><image:title>Website Prospector Baependi Cunha</image:title></image:image></url>
+  <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/baependi.html</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/og-image.png</image:loc><image:title>Site Baependi</image:title></image:image></url>
+  <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/cunha.html</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/og-image.png</image:loc><image:title>Site Cunha</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5001.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
     <image:image><image:loc>https://allianceconsultoria.github.io/website-prospector-sites/img/dentista.jpg</image:loc><image:title>Dentista Premium</image:title></image:image></url>
   <url><loc>https://allianceconsultoria.github.io/website-prospector-sites/lead-5002.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
